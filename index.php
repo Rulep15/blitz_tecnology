@@ -11,7 +11,7 @@ if ($_SESSION) {
     <head>
         <meta charset="UTF-8">
         <meta content="width=devicewidth, initial-scale=1, maximum-scalable=no"name="viewport">
-        <title>Sistema</title>
+        <title>Acceso a Sistema!</title>
         <?php require 'estilos/css_lte.ctp'; ?>
         <style>
             body{
