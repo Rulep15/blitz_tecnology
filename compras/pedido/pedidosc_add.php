@@ -94,7 +94,7 @@
     <script>
         /*MENSAJE DE INSERT MARCAS, TIPO,. ETC*/
         $("#mensaje").delay(1000).slideUp(200, function () {
-        $(this).alert('close');
+        $(this).alert('close')})
 
     </script>
 </HTML>
