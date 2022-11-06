@@ -61,12 +61,12 @@ if ($_SESSION) {
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback"> 
-                    <input type="password" name="pass" class="form-control" placeholder="Ingrese contraseÃ±a" required="">
+                    <input type="password" name="pass" class="form-control" placeholder="Ingrese contraseña" required="">
                     <span class="glyphicon glyphicon-qrcode form-control-feedback"></span>
                 </div>
                 <button class="btn btn-lg btn-info btn-block" type="submit" style="background-color: #008CBA; padding: 5px 5px;">Iniciar Sesion</button>
                 <div class="checkbox" style="padding: 0px 20px;">
-                    <p style="text-align: center;"class="help-block"><a href="#">Â¿No puede Ingresar a su cuenta?</a></p>
+                    <p style="text-align: center;"class="help-block"><a href="#">¿No puede Ingresar a su cuenta?</a></p>
                 </div>
                 <?php if (!empty($_SESSION['error'])){ ?>
                 <div class="alert alert-danger" role="alert">
