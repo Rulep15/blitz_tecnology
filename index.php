@@ -11,7 +11,7 @@ if ($_SESSION) {
     <head>
         <meta charset="UTF-8">
         <meta content="width=devicewidth, initial-scale=1, maximum-scalable=no"name="viewport">
-        <title>Acceso al Sistema</title>
+        <title>Acceso la Sistema</title>
         <?php require 'estilos/css_lte.ctp'; ?>
         <style>
             body{
@@ -61,12 +61,12 @@ if ($_SESSION) {
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback"> 
-                    <input type="password" name="pass" class="form-control" placeholder="Ingrese contraseña" required="">
+                    <input type="password" name="pass" class="form-control" placeholder="Ingrese contraseÃ±a" required="">
                     <span class="glyphicon glyphicon-qrcode form-control-feedback"></span>
                 </div>
-                <button class="btn btn-lg btn-info btn-block" type="submit" style="background-color: #0008CBA; padding:5px 5px;">Iniciar Sesion</button>
+                <button class="btn btn-lg btn-info btn-block" type="submit" style="background-color: #008CBA; padding: 5px 5px;">Iniciar Sesion</button>
                 <div class="checkbox" style="padding: 0px 20px;">
-                    <p style="text-align: center;"class="help-block"><a href="#">¿No puede Ingresar a su cuenta?</a></p>
+                    <p style="text-align: center;"class="help-block"><a href="#">Â¿No puede Ingresar a su cuenta?</a></p>
                 </div>
                 <?php if (!empty($_SESSION['error'])){ ?>
                 <div class="alert alert-danger" role="alert">
