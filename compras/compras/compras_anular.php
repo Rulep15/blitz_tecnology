@@ -22,7 +22,7 @@
                         <div class="box box-primary">
                             <div class="box-header">
                                 <i class="ion ion-edit"></i>
-                                <h3 class="box-title">Confirmar Compra</h3>
+                                <h3 class="box-title">Anular Compra</h3>
                                 <div class="box-tools">
                                     <a href="compras_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>

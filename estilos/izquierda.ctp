@@ -10,7 +10,15 @@
                 }
                 ?>" class="img-circle" alt="Imagen de Usuario">
             </div>
-            <div class="pull-left info" style="font-size: 12px; padding-top: 20px;"><p><?php echo $_SESSION['nombres']; ?></p></div>
+          <div class="pull-left info" style="font-size: 12px; padding-top: 5px;"><p><?php echo $_SESSION['nombres']; ?></p>
+                <a  href="#">
+                    <i class="fa fa-circle text-success"></i>
+                    <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En linea</font>
+                    </font>
+                </a>                   
+            </div>
+    <li> <a></a></li>
         </div>
         <ul class="sidebar-menu">
             <li><a href="/blitz_tecnology/menu.php" class="fa fa-home"><span class="logo-lg"><strong> INICIO</strong></span> </a></li>
