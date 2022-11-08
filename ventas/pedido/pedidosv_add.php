@@ -13,7 +13,7 @@
         <div id="wrapper">
             <?php require '../../estilos/cabecera.ctp'; ?>
             <?php require '../../estilos/izquierda.ctp'; ?>
-            <div class="content-wrapper" style="background-color: #BBBBBB;">
+            <div class="content-wrapper" style="background-color: #333333;">
                 <div class="content">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12">
@@ -94,7 +94,7 @@
     <script>
         /*MENSAJE DE INSERT MARCAS, TIPO,. ETC*/
         $("#mensaje").delay(1000).slideUp(200, function () {
-        $(this).alert('close');
+        $(this).alert('close')});
 
     </script>
 </HTML>

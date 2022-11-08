@@ -13,7 +13,7 @@
         <div class="wrapper" style="background-color:#1e282c;">
             <?php require '../../estilos/cabecera.ctp'; ?>
             <?php require '../../estilos/izquierda.ctp'; ?>
-            <div class="content-wrapper" style="background-color: #BBBBBB;">
+            <div class="content-wrapper" style="background-color: #333333;">
                 <div class="content">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12">
