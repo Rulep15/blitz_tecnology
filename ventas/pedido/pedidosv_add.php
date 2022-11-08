@@ -39,19 +39,19 @@
                                     <i class="ion ion-plus"></i>
                                     <h3 class="box-title">Agregar Pedido</h3>
                                     <div class="box-tools">
-                                        <a href="pedidosc_index.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="pedidosv_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <form action="pedidosc_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                <form action="pedidosv_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <input type="hidden" name="voperacion"  value="1">
                                             <input type="hidden" name="vestado" value="ACTIVO"/> 
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Codigo de Pedido</label>
-                                                <?php $pc = consultas::get_datos("SELECT COALESCE(MAX(id_pedido),0)+1 AS ultimo FROM compras_pedidos") ?>
+                                                <?php $pc = consultas::get_datos("SELECT COALESCE(MAX(id_pedido),0)+1 AS ultimo FROM ventas_pedidos") ?>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vidpedido" readonly="" value="<?php echo $pc[0]['ultimo']; ?>">
                                                 </div>

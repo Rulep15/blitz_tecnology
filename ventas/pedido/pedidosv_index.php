@@ -39,7 +39,7 @@
                                     <i class="ion ion-clipboard"></i>
                                     <h3 class="box-title">Pedidos</h3>
                                     <div class="box-tools">
-                                        <a href="pedidosc_add.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="pedidosv_add.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-plus"></i>
                                         </a>
 
@@ -102,15 +102,9 @@
 
                                                                     
                                                                     <td class="text-center">
-                                                                        <?php if ($pc['estado'] == 'ACTIVO') { ?>
-                                                                            <a href="pedidosc_edit.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
-                                                                               class="btn btn-warning btn-sm" role="button"
-                                                                               data-title="Editar" rel="tooltip" data-placement="top">
-                                                                                <span class="glyphicon glyphicon-edit"></span>
-                                                                            </a>
-                                                                        <?php } ?>
+                                                                     
                                                                             <?php if ($pc['estado'] == 'ACTIVO' || $pc['estado'] == 'ANULADO' || $pc['estado'] == 'CONFIRMADO') { ?>
-                                                                                <a href="pedidosc_detalle.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
+                                                                                <a href="pedidosv_detalle.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
                                                                                    class="btn btn-primary btn-sm" role="button"
                                                                                    data-title="Detalle" rel="tooltip" data-placement="top">
                                                                                     <i class="fa  fa-list"></i>
@@ -122,7 +116,7 @@
                                                                                 $pcdetalle = consultas::get_datos("SELECT * FROM compras_pedidos_detalle WHERE id_pedido=" . $pc['id_pedido']);
                                                                                 if (!empty($pcdetalle)) {
                                                                                     ?>
-                                                                                    <a href="pedidosc_confirmar.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
+                                                                                    <a href="pedidosv_confirmar.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
                                                                                        class="btn btn-success btn-sm" role="button"
                                                                                        data-title="Confirmar" rel="tooltip" data-placement="top">
                                                                                         <span id="confirmar" class="glyphicon glyphicon-ok-sign"></span>
@@ -134,14 +128,14 @@
                                                                             }
                                                                             ?>
                                                                             <?php if ($pc['estado'] == 'CONFIRMADO') { ?>
-                                                                                <a href="pedidosc_anular.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
+                                                                                <a href="pedidosv_anular.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
                                                                                    class="btn btn-danger btn-sm" role="button"
                                                                                    data-title="Anular" rel="tooltip" data-placement="top">
                                                                                     <span  class="glyphicon glyphicon-ban-circle"></span>
                                                                                 </a>
                                                                             <?php } ?>
                                                                             <?php if ($pc['estado'] == 'CONFIRMADO') { ?>
-                                                                                <a href="pedidosc_print.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
+                                                                                <a href="pedidosv_print.php?vidpedido=<?php echo $pc['id_pedido']; ?>" 
                                                                                    class="btn btn-success btn-sm" role="button"
                                                                                    data-title="Impresion" rel="tooltip" data-placement="top">
                                                                                     <span  class="fa fa-print"></span>
