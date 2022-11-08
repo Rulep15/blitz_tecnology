@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta content="width=devicewidth, initial-scale=1, maxium-scalable=no" name="viewport">
 </head>
+
 <?php
 include './conexion.php';
 require './estilos/css_lte.ctp';
@@ -19,13 +20,12 @@ require './estilos/css_lte.ctp';
         <div class="content-wrapper" style="background-color: #272829;">
             <section class="content-header">
                 <section class="content">
-                    <h3 style="color: white; font-size: 50px; font-style: italic;">
+                    <h3  style="color: white; font-size: 50px; font-family: Time New Roman; font-style: italic;">
                         Bienvenido al Sistema <?php echo '- ', $_SESSION['nombres']; ?>
                     </h3>
                     <br><br>
                     <br>
                     <img src="./img/menu/menu1.gif" style="width: 900px; height: 500px;">
-
                 </section>
             </section>
         </div>

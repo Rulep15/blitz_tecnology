@@ -46,13 +46,13 @@
                                 </div>
                                 <form action="productos_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <input type="hidden" name="voperacion"  value="1">
                                             <input type="hidden" name="vidproducto" value="0"/> 
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Codigo de barra</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vcodigob" required="" autofocus>
+                                                    <input class="form-control" type="number" name="vcodigob" required="" autofocus>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -166,7 +166,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Descripcion</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vdescripcion" required="">
+                                                    <input class="form-control" type="text" name="vdescripcion" required=""  onkeypress="return soloLetras(event);">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -213,7 +213,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Descripcion</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" name="vdescripcion" required="" autofocus="" id="vmardescri">
+                                            <input type="text" class="form-control" name="vdescripcion" required="" autofocus="" id="vmardescri"  onkeypress="return soloLetras(event);">
                                         </div>
                                     </div>
                                 </div>
@@ -240,7 +240,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Descripcion</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" name="vdescripcion" required="" autofocus="autofocus" id="vtiprodescri">
+                                            <input type="text" class="form-control" name="vdescripcion" required="" autofocus="autofocus"  onkeypress="return soloLetras(event);" id="vtiprodescri">
                                         </div>
                                     </div>
                                 </div>
@@ -283,5 +283,26 @@
         $("#cerrar_tp").click(function () {
             $('vidtipro, #vtiprodescri').val("");
         });
+        function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
     </script>
 </HTML>

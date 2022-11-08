@@ -246,9 +246,6 @@
         $('#cerrar_impuesto').click(function () {
             $('#vidimp , #vimpdescri').val("");
         });
-//        
-//        $('#cerrar_unidad').click(function () {
-//            $(' #vidum ,#vumdescri').val("");
-//        });
+
     </script>
 </html>

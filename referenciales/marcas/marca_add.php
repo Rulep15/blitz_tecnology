@@ -35,7 +35,7 @@
                                             <input type="hidden" name="vcodigo" value="0">
                                             <label class="col-lg-2 control-label">Nombre</label>
                                             <div class="col-lg-8">
-                                                <input class="form-control" type="text" name="vnombre" required="" autofocus="">
+                                                <input class="form-control" type="text" name="vnombre" required="" autofocus="" onkeypress="return soloLetras(event);">
                                             </div>
                                         </div>
                                     </div>
@@ -53,3 +53,27 @@
     </body>
     <?php require '../../estilos/js_lte.ctp'; ?>
 </html>
+<script>
+    //LETRAS
+    function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
+</script>   

@@ -140,7 +140,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Descripcion</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtipopdescri" required="" autofocus="">
+                                        <input type="text" class="form-control" name="vtipopdescri" required="" autofocus="" onkeypress="return soloLetras(event);">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Descripcion</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtipopdescri" required="" 
+                                        <input type="text" class="form-control" name="vtipopdescri" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">
                                     </div>
                                 </div>
@@ -229,5 +229,27 @@
             $('#si').attr('href', 'tipopersona_control.php?vidtipoper=' + dat[0] + '&vtipopdescri=' + dat[1] + '&voperacion=3');
             $('#confirmacion').html('<span class="glyphicon glyphicon-warning-sign"></span> Desea Borrar el registro <i><strong>' + dat[1] + '</strong></i>?');
         }
+         //LETRAS
+    function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
     </script>
 </HTML>

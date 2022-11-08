@@ -46,7 +46,7 @@
                                 </div>
                                 <form action="deposito_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <input type="hidden" name="voperacion"  value="1">
                                             <input type="hidden" name="vcodigo" value="0"/> 
                                             
@@ -83,7 +83,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Descripcion</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vdescripcion" required="">
+                                                    <input class="form-control" type="text" name="vdescripcion" required="" onkeypress="return soloLetras(event);" >
                                                 </div>
                                             </div>
                                             
@@ -107,19 +107,12 @@
                             <form action="deposito_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                 <input name="voperacion" value="4" type="hidden">
                                 <input name="vidsucursal" value="0" type="hidden" id="vidsucursal">
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Cod Ciudad</label>
-                                        <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="number" class="form-control" name="vcodigo" required="" autofocus="" id="vsucidciudad">
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Descripcion</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" name="vdescripcion" required="" autofocus="" id="vsucdescri">
+                                            <input type="text" class="form-control" name="vdescripcion" required="" autofocus="" id="vsucdescri" onkeypress="return soloLetras(event);" >
                                         </div>
                                     </div>
                                 </div>
@@ -170,4 +163,28 @@
         });
         
     </script>
+      <script>
+    //LETRAS
+    function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
+</script>   
 </HTML>

@@ -146,7 +146,7 @@
                                     <i class="ion ion-clipboard"></i>
                                     <h3 class="box-title">Agregar Items</h3>
                                 </div>
-                                <div class="box-body no-padding" style="">
+                                <div class="box-body no-padding" >
                                     <?php if ($pc['estado'] == 'ACTIVO') { ?>
                                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                                             <form action="pedidosc_detalle_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
@@ -156,7 +156,7 @@
                                                     <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Deposito</label>
-                                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6" style="">
+                                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                 <?php $depositos = consultas::get_datos("SELECT * FROM ref_deposito WHERE id_sucursal=" . $_SESSION['id_sucursal']) ?>
                                                                 <select class="select2" name="vdeposito" required="" style="width: 300px;">
                                                                     <?php

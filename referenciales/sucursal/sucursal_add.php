@@ -81,13 +81,13 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Sucursal</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vsucursal" required="">
+                                                    <input class="form-control" type="text" name="vsucursal" required="" onkeypress="return soloLetras(event);">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Telefono</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vtelefono" required="">
+                                                    <input class="form-control" type="number" name="vtelefono" required="">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -117,22 +117,10 @@
                                 <input name="voperacion" value="4" type="hidden">
                                 <input name="vcodigo" value="0" type="hidden">
                                 <div class="box-body">
-                                    
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Cod.Pais</label>
-                                        <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" name="vciudad" required="" autofocus="" id="vpaiscodigo">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="box-body">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Descripcion</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" name="vdireccion" required="" autofocus="" id="vciudescri">
+                                            <input type="text" class="form-control" name="vdireccion" required="" autofocus="" id="vciudescri" onkeypress="return soloLetras(event);">
                                         </div>
                                     </div>
                                 </div>
@@ -168,5 +156,29 @@
         $("#vpaiscodigo, #vciudescri").val("");
     });
 
+</script>
+<script>
+    //LETRAS
+    function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
 </script>
 </HTML>

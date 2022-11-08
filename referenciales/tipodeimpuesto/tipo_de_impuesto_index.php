@@ -142,8 +142,8 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Descripcion<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtdescripcion" required="" autofocus="">
-                                        <input type="text" class="form-control" name="vporcentaje" required="" autofocus="">
+                                        <input type="text" class="form-control" name="vtdescripcion" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                        <input type="number" class="form-control" name="vporcentaje" required="" autofocus="">
                                     </div>
                                 </div>
                             </div>
@@ -171,9 +171,9 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Descripcion<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtdescripcion" required="" 
+                                        <input type="text" class="form-control" name="vtdescripcion" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">
-                                        <input type="text" class="form-control" name="vporcentaje" required="" 
+                                        <input type="number" class="form-control" name="vporcentaje" required="" 
                                                id="porcentaje">
                                     </div>
                                 </div>
@@ -237,4 +237,28 @@
             $('#confirmacion').html('<span class="glyphicon glyphicon-warning-sign"></span> Desea Borrar el registro <i><strong>' + dat[1] + ' y ' + dat[2] + '</strong></i>?');
         }
     </script>
+       <script>
+    //LETRAS
+    function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
+</script>   
 </HTML>

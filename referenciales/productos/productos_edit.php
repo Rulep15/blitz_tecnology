@@ -36,25 +36,25 @@
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Codigo B.</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vcodigob" required="" value="<?php echo $resultado[0]['codigo_barra']; ?>">
+                                                    <input class="form-control" type="number" name="vcodigob" required="" value="<?php echo $resultado[0]['codigo_barra']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Descripcion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vdescripcion" required="" value="<?php echo $resultado[0]['pro_descri']; ?>">
+                                                    <input class="form-control" type="text" name="vdescripcion" required=""  onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['pro_descri']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Precio Compra</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vprecioc" required="" value="<?php echo $resultado[0]['precio_costo']; ?>">
+                                                    <input class="form-control" type="number" name="vprecioc" required="" value="<?php echo $resultado[0]['precio_costo']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Precio Venta</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vpreciov" required="" value="<?php echo $resultado[0]['precio_venta']; ?>">
+                                                    <input class="form-control" type="number" name="vpreciov" required="" value="<?php echo $resultado[0]['precio_venta']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -166,4 +166,27 @@
         <?php require '../../estilos/pie.ctp'; ?>
     </BODY>
     <?php require '../../estilos/js_lte.ctp'; ?>
+    <script>
+             function soloLetras(e)
+    {
+        key = e.keyCode || e.which;
+        tecla = String.fromCharCode(key).toString();
+        letras = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú";
+
+        especiales = [8, 13, 32];
+        tecla_especial = false
+        for (var i in especiales) {
+            if (key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        {
+            //alert("Ingresar solo letras");
+            return false;
+        }
+    }
+    </script>
 </HTML>
