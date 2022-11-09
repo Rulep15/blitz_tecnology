@@ -10,7 +10,7 @@
         ?>
     </HEAD>
     <BODY class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
+        <div class="wrapper" style="background-color: #1E282C;">
             <?php require '../../estilos/cabecera.ctp'; ?>
             <?php require '../../estilos/izquierda.ctp'; ?>
             <div class="content-wrapper" style="background-color: #333333">
@@ -36,14 +36,14 @@
                                 </div>
                             <?php } ?>
                             <!-- MENSAJE -->
-                            <h3>Pedidos de Compras - Detalle</h3>
+                            <h3>Pedidos de Ventas - Detalle</h3>
                             <!--CABECERA-->
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <i class="ion ion-clipboard"></i>
                                     <h3 class="box-title">Cabecera</h3>
                                     <div class="box-tools">
-                                        <a href="pedidosc_index.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="pedidosv_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>                                     
                                     </div>
@@ -53,17 +53,17 @@
                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                             <?php
                                             $idpedido = $_REQUEST['vidpedido'];
-                                            $pedidosc = consultas::get_datos("SELECT * FROM v_compras_pedido WHERE id_pedido = $idpedido ");
+                                            $pedidosc = consultas::get_datos("SELECT * FROM v_ventas_pedido WHERE id_pedido = $idpedido ");
                                             if (!empty($pedidosc)) {
                                                 ?>
                                                 <div class="table-responsive">
                                                     <table class="table col-lg-12 col-md-12 col-xs-12">
                                                         <thead>
                                                             <tr>
-                                                                <th class="text-center">#</th>
+                                                                <th class="text-center">N°</th>
                                                                 <th class="text-center">Fecha</th>
                                                                 <th class="text-center">Usuario</th>
-                                                                <th class="text-center">Observacion</th>
+                                                                <th class="text-center">Cliente</th>
                                                                 <th class="text-center">Estado</th>    
                                                             </tr>
                                                         </thead>
@@ -73,7 +73,7 @@
                                                                     <td class="text-center"> <?php echo $pc['id_pedido']; ?></td>
                                                                     <td class="text-center"> <?php echo $pc['fecha_pedido1']; ?></td>
                                                                     <td class="text-center"> <?php echo $pc['usu_nick']; ?></td>
-                                                                    <td class="text-center"> <?php echo $pc['observacion']; ?></td>
+                                                                    <td class="text-center"> <?php echo $pc['nombres']; ?></td>
                                                                     <td class="text-center"> <?php echo $pc['estado']; ?></td>
                                                                 </tr>
                                                             <?php } ?>
@@ -96,7 +96,7 @@
                                     <div class="col-lg-12 col-md-12 col-xs-12">
                                         <?php
                                         $idpedido = $_REQUEST['vidpedido'];
-                                        $pedidoscdetalle = consultas::get_datos("SELECT * FROM v_compras_pedidos_detalle WHERE id_pedido = $idpedido");
+                                        $pedidoscdetalle = consultas::get_datos("SELECT * FROM v_ventas_pedidos_detalle WHERE id_pedido = $idpedido");
                                         if (!empty($pedidoscdetalle)) {
                                             ?>
                                             <div class="table-responsive">
@@ -141,22 +141,22 @@
                             </div>
                              <?php if ($pc['estado'] == 'ACTIVO') {?>
                             <!--AGREGAR DETALLE-->
-                            <div class="box box-primary" style="width: 550px; height: 300px;margin: 0 auto;">
+                            <div class="box box-primary" style="width: 550px; height: 350px;margin: 0 auto;">
                                 <div class="box-header">
                                     <i class="ion ion-clipboard"></i>
                                     <h3 class="box-title">Agregar Items</h3>
                                 </div>
-                                <div class="box-body no-padding" style="">
+                                <div class="box-body no-padding">
                                     <?php if ($pc['estado'] == 'ACTIVO') { ?>
                                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                                            <form action="pedidosc_detalle_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                            <form action="pedidosv_detalle_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                                 <div class="box-body" style="left: 1000px;">
                                                     <input type="hidden" name="voperacion" value="1"/>
                                                     <input type="hidden" name="vidpedido" value="<?php echo $_REQUEST['vidpedido']; ?>"/>
                                                     <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
                                                         <div class="form-group">
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Deposito</label>
-                                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6" style="">
+                                                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                 <?php $depositos = consultas::get_datos("SELECT * FROM ref_deposito WHERE id_sucursal=" . $_SESSION['id_sucursal']) ?>
                                                                 <select class="select2" name="vdeposito" required="" style="width: 300px;">
                                                                     <?php
@@ -177,7 +177,8 @@
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Producto</label>
                                                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                 <?php $productos = consultas::get_datos("SELECT * FROM ref_producto ORDER BY pro_cod") ?>
-                                                                <select class="select2" name="vproducto" required="" style="width: 300px;">
+                                                                <select class="select2" name="vproducto" required="" style="width: 300px;"
+                                                                id="idproducto" onchange="obtenerprecio()" onkeyup="obtenerprecio()" onclick="obtenerprecio()">
                                                                     <?php
                                                                     if (!empty($productos)) {
                                                                         foreach ($productos AS $producto) {
@@ -196,16 +197,23 @@
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Cantidad</label>
                                                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                 <input type="number" name="vcantidad" class="form-control" required=""
-                                                                       min="0" value="1" style="width: 300px;">
+                                                                       min="0" value="1" style="width: 300px;" id="idcantidad" onchange="calsubtotal()" onkeydown="calsubtotal()">
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
+                                                        <div class="form-group" id="precio">
                                                             <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Precio</label>
                                                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
                                                                 <input type="number" name="vprecio" class="form-control" required=""
                                                                        min="1000" value="0" style="width: 300px;">
                                                             </div>
                                                         </div>
+                                                        <div class="form-group">
+                                                                <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Subtotal</label>
+                                                                <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                                                                    <input type="number" name="vsubtotal" class="form-control" readonly=""
+                                                                           min="1000" value="0" style="width: 300px;" id="idsubtotal">
+                                                                </div>
+                                                            </div>
                                                     </div>
                                                 </div>
                                                 <div class="">
@@ -258,8 +266,31 @@
 
         function quitar(datos) {
             var dat = datos.split("_");
-            $('#si').attr('href', 'pedidosc_detalle_control.php?vidpedido=' + dat[0] + '&vproducto=' + dat[1] + '&vdeposito=' + dat[2] + '&voperacion=2');
+            $('#si').attr('href', 'pedidosv_detalle_control.php?vidpedido=' + dat[0] + '&vproducto=' + dat[1] + '&vdeposito=' + dat[2] + '&voperacion=2');
             $('#confirmacion').html('<span class="glyphicon glyphicon-warning-sign"></span> Desea quitar el producto del detalle <i><strong>' + dat[1] + '</strong></i>?');
+        }
+        function calsubtotal() {
+            var precio = parseInt($('#idprecio1').val());
+            var cant = parseInt($('#idcantidad').val());
+            $('#idsubtotal').val(precio * cant);
+        }
+    </SCRIPT>
+     <SCRIPT>
+        function obtenerprecio() {
+            var dat = $('#idproducto').val().split("_");
+            if (parseInt($('#idproducto').val()) > 0) {
+                $.ajax({
+                    type: "GET",
+                    url: "/blitz_tecnology/compras/compras/listar_precios.php?vidproducto=" + dat[0], cache: false,
+                    beforeSend: function () {
+                        $('#precio').html('<img src="/blitz_tecnology/img/sistema/ajax-loader.gif">\n\ <strong><i>Cargando...');
+                    },
+                    success: function (msg) {
+                        $('#precio').html(msg);
+                        calsubtotal();
+                    }
+                });
+            }
         }
     </SCRIPT>
 </HTML>

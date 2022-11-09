@@ -117,7 +117,7 @@
                                                                     <?php } ?>
                                                                     <?php
                                                                     if ($pc['estado'] == 'ACTIVO') {
-                                                                        $pcdetalle = consultas::get_datos("SELECT * FROM compras_pedidos_detalle WHERE id_pedido=" . $pc['id_pedido']);
+                                                                        $pcdetalle = consultas::get_datos("SELECT * FROM ventas_pedidos_detalle WHERE id_pedido=" . $pc['id_pedido']);
                                                                         if (!empty($pcdetalle)) {
                                                                     ?>
                                                                             <a href="pedidosv_confirmar.php?vidpedido=<?php echo $pc['id_pedido']; ?>" class="btn btn-success btn-sm" role="button" data-title="Confirmar" rel="tooltip" data-placement="top">
