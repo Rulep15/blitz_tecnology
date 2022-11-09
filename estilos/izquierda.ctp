@@ -27,7 +27,7 @@
                 <?php foreach ($modulos as $modulo) { ?>
                     <li class="treeview">
                         <a href=""> 
-                            <i class="fa fa-folder-o"></i> 
+                            <i class="fa fa-folder"></i> 
                             <span ><?php echo $modulo['mod_nombre'] ?></span> 
                             <i class="fa fa-angle-double-right pull-right"></i> 
                         </a>
@@ -35,9 +35,10 @@
                         <ul class="treeview-menu" >                             
                             <?php foreach ($paginas as $pagina) { ?>
                                 <li>
-                                    <a class="fa fa-folder-open"
+                                    <a class="fa fa-cube"
                                        href="<?php echo $pagina['pag_direc']; ?>"><?php echo " " . $pagina['pag_nombre']; ?>
-                                    </a>     
+                                    </a>
+                                         
                                 </li>
                                 <?php $_SESSION[$pagina['pag_nombre']] = $pagina; ?>
                             <?php } ?>  

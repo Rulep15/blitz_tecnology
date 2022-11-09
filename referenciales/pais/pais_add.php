@@ -40,7 +40,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer">
-                                        <button class="btn btn-success pull-right" type="submit">Registra</button>
+                                        <button class="fa fa-save btn btn-success pull-right" type="submit"> Registrar</button>
                                     </div>
                                 </form>
                             </div>

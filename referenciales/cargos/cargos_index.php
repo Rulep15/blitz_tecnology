@@ -146,8 +146,8 @@
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_cargo">Cerrar</button>
-                                <button type="submit" class="btn btn-success pull-right" id="registrar_cargo">Registrar</button>
+                                <button type="reset" data-dismiss="modal" class="fa fa-close btn btn-danger" id="cerrar_cargo"> Cerrar</button>
+                                <button type="submit" class="fa fa-save btn btn-success pull-right" id="registrar_cargo"> Registrar</button>
                             </div>
                         </form>
                     </div>
