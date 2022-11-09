@@ -49,7 +49,7 @@
                             <form action="pedidosv_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                 <div class="box-body">
                                     <div class="row">
-                                        <input type="hidden" name="voperacion" value="1">
+                                        <input type="hidden" name="operacion" value="1">
                                         <input type="hidden" name="vestado" value="ACTIVO" />
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Codigo de Pedido</label>
@@ -71,12 +71,7 @@
                                                 <input class="form-control" type="text" name="vusunick" readonly="" value="<?php echo $_SESSION['usu_nick']; ?>">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-lg-2 col-sm-2 col-xs-4">Total</label>
-                                            <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="number" name="vtotal" value="<?php echo $_SESSION['totalp']; ?>" />
-                                            </div>
-                                        </div>
+                                       
                                         <!--Cliente-->
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-2">Cliente</label>
@@ -99,6 +94,11 @@
                                                     </select>
 
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-lg-6 col-sm-6 col-xs-7">
+                                                <input class="form-control" type="hidden" name="vestado" readonly="" value="<?php echo $c['estado']; ?>">
                                             </div>
                                         </div>
                                     </div>
