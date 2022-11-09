@@ -22,16 +22,16 @@
                                     <i class="ion ion-edit"></i>
                                     <h3 class="box-title">Anular Pedido</h3>
                                     <div class="box-tools">
-                                        <a href="pedidosc_index.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="pedidosv_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <form action="pedidosc_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                <form action="pedidosv_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <?php $resultado = consultas::get_datos("SELECT * FROM v_compras_pedido WHERE id_pedido =" . $_GET['vidpedido']); ?>
+                                        <?php $resultado = consultas::get_datos("SELECT * FROM v_ventas_pedido WHERE id_pedido =" . $_GET['vidpedido']); ?>
                                         <div class="form-group-lg form-group-sm">
-                                            <input class="form-control" type="hidden" name="voperacion" value="4">
+                                            <input class="form-control" type="hidden" name="operacion" value="4">
 
                                             <div class="form-group">    
                                                 <label class="col-lg-2 control-label">Codigo de Pedido</label>
@@ -56,9 +56,8 @@
                                             </div>
                                             
                                             <div class="form-group">    
-                                                <label class="col-lg-2 control-label">Observacion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vobservacion" readonly="" value="<?php echo $resultado[0]['observacion']; ?>">
+                                                    <input class="form-control" type="hidden" name="vestado" readonly="" value="<?php echo $resultado[0]['estado']; ?>">
                                                 </div>
                                             </div>
                                         </div>

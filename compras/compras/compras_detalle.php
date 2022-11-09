@@ -272,7 +272,7 @@
     </BODY>
     <?php require '../../estilos/js_lte.ctp'; ?>
     <SCRIPT>
-        $("#mensaje").delay(30000).slideUp(200, function () {
+        $("#mensaje").delay(1000).slideUp(200, function () {
             $(this).alert('close');
         });
 

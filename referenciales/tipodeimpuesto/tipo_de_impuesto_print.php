@@ -30,7 +30,7 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 //TIPO DE LETRAS
 $pdf->SetFont('times', 'B', 14);
 //AGREGAR UNA PAGINA
-$pdf->AddPage('P', 'LEGAL');
+$pdf->AddPage('L', 'LEGAL');
 //FORMATO DE TITULO
 $pdf->Cell(0, 0, "REPORTE DE TIPO DE IMPUESTO", 0, 1, 'C');
 //SALTO DE LINEA
