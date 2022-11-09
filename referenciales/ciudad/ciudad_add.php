@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: center;">
-                                        <button class="btn btn-success  pull-right" type="submit">Registrar</button>
+                                        <button class=" fa fa-save btn btn-success  pull-right" type="submit"> Guardar</button>
                                     </div>
                                 </form>
                             </div>
@@ -104,7 +104,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="cerrar close" data-dismiss='modal' id="cerrar_agregar" arial-label="Close">X</button>
-                                <h4 class="modal-title"><strong>Registrar País</strong></h4>
+                                <h4 class="modal-title"><strong>Registrar Pais</strong></h4>
                             </div>
                             <form action="ciudad_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                 <input name="voperacion" value="4" type="hidden">
@@ -118,8 +118,8 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_agregar1">Cerrar</button>
-                                    <button type="submit" class="btn btn-success pull-right">Registrar</button>
+                                    <button type="reset" data-dismiss="modal" class="fa fa-close btn btn-danger" id="cerrar_agregar1"> Cerrar</button>
+                                    <button type="submit" class="fa fa-save btn btn-success pull-right"> Guardar</button>
                                 </div>
                             </form>
                         </div>

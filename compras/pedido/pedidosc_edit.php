@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: right;">
-                                        <button class="btn btn-success" type="submit">Editar</button>
+                                        <button class="fa fa-save btn btn-success" type="submit"> Guardar</button>
                                     </div>
                                 </form>
                             </div>

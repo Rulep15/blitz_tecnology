@@ -78,7 +78,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: center;">
-                                        <button class="btn btn-success pull-right" type="submit">Modificar</button>
+                                        <button class="fa fa-save btn btn-success pull-right" type="submit"> Guardar</button>
                                     </div>
                                 </form>
                             </div>

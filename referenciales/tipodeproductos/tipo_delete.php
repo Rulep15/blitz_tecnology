@@ -42,7 +42,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer">
-                                        <button class="btn btn-danger pull-right" type="submit">Borrar</button>
+                                        <button class="fa fa-trash btn btn-danger pull-right" type="submit"> Borrar</button>
                                     </div>
                                 </form>
                             </div>

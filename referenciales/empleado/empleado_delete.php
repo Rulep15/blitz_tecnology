@@ -130,7 +130,7 @@
 
                                     </div>
                                     <div class = "box-footer">
-                                        <button class = "btn btn-danger pull-right" type = "submit"> Inhabilitar</button>
+                                        <button class = "fa fa-save btn btn-danger pull-right" type = "submit"> Guardar</button>
 
                                     </div>
                                 </form>
@@ -182,8 +182,8 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_ciudad">Cerrar</button>
-                                    <button type="submit" class="btn btn-success pull-right">Registrar</button>
+                                    <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_ciudad"> Cerrar</button>
+                                    <button type="submit" class="fa fa-save btn btn-success pull-right">Guardar</button>
                                 </div>
 
                             </form>
@@ -212,8 +212,8 @@
                                     </div>
                                  </div>
                                 <div class="box-footer">
-                                    <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_marca">Cerrar</button>
-                                    <button type="submit" class="btn btn-success pull-right">Registrar</button>
+                                    <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_marca"> Cerrar</button>
+                                    <button type="submit" class="fa fa-save btn btn-success pull-right"> Guardar</button>
                                 </div>
 
                             </form>
@@ -279,8 +279,8 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_marca">Cerrar</button>
-                                    <button type="submit" class="btn btn-success pull-right">Registrar</button>
+                                    <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_marca"> Cerrar</button>
+                                    <button type="submit" class="fa fa-save btn btn-success pull-right"> Guardar</button>
                                 </div>
 
                             </form>

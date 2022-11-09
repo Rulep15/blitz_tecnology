@@ -176,7 +176,7 @@
                             </div>
                             <div class="box-footer">
                                 <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar1">Cerrar</button>
-                                <button type="submit" class="btn btn-success pull-right">Grabar</button>
+                                <button type="submit" class="fa fa-save btn btn-success pull-right">Grabar</button>
                             </div>
                         </form>
                     </div>
