@@ -3,9 +3,8 @@
 require '../../conexion.php';
 session_start();
 
-$operacion = $_REQUEST['operacion'];
+$operacion = $_REQUEST['voperacion'];
 $codigo = $_REQUEST['vidventa'];
-$usuario = $_SESSION['vusuario'];
 $cliente = $_REQUEST['vidcliente'];
 $nrofactura = $_REQUEST['vnrofactura'];
 $fecha = $_REQUEST['vfecha'];
@@ -21,7 +20,6 @@ $estado = "ACTIVO";
 
 $sql = "SELECT sp_ventas(" . $operacion . "," .
     (!empty($codigo) ? $codigo : 0) . "," .
-    (!empty($usuario) ? $usuario : 0) . "," .
     (!empty($cliente) ? $cliente : 0) . ",'" .
     (!empty($nrofactura) ? $nrofactura : "VACIO") . "','" .
     (!empty($fecha) ? $fecha : "01-01-0001") . "','" .
