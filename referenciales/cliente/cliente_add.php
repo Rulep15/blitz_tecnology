@@ -71,26 +71,12 @@
                                                             <?php }
                                                             ?>
                                                         </select>
-                                                        <span class="input-group-btn">
-                                                            <a href="/lp3/referenciales/persona/persona_add.php" class="btn btn-primary pull-right btn-flat">
-                                                                <i class="fa fa-plus"></i>
-                                                            </a>
-                                                        </span>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-lg-2 col-sm-2 col-xs-4">C.I</label>
-                                                <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vci" required="">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label col-lg-2 col-sm-2 col-xs-4">Nombres</label>
-                                                <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vnombre" required="" onkeypress="return soloLetras(event)">
-                                                </div>
-                                            </div>
+                                        
+                                         
 
                                         </div>
                                     </div>
