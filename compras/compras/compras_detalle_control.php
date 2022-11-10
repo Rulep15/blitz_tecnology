@@ -13,12 +13,12 @@ $subtotal = $_REQUEST['vsubtotal'];
 
 
 $sql = "SELECT sp_compras_detalle(" . $operacion . "," .
-        (!empty($codigo) ? $codigo : 0) . "," .
-        (!empty($deposito) ? $deposito : 0) . "," .
-        (!empty($producto) ? $producto : 0) . "," .
-        (!empty($cantidad) ? $cantidad : 0) . "," .
-        (!empty($precio) ? $precio : 0) . "," .
-        (!empty($subtotal) ? $subtotal : 0) . ") AS comprasdetalles;";
+    (!empty($codigo) ? $codigo : 0) . "," .
+    (!empty($deposito) ? $deposito : 0) . "," .
+    (!empty($producto) ? $producto : 0) . "," .
+    (!empty($cantidad) ? $cantidad : 0) . "," .
+    (!empty($precio) ? $precio : 0) . "," .
+    (!empty($subtotal) ? $subtotal : 0) . ") AS comprasdetalles;";
 $resultado = consultas::get_datos($sql);
 
 if ($resultado[0]['comprasdetalles'] != NULL) {

@@ -22,12 +22,12 @@
                                 <?php
                                 $mensaje = explode("_/_", $_SESSION['mensaje']);
                                 if (($mensaje[0] == 'NOTICIA')) {
-                                    $class = "success";
+                                    $vlass = "success";
                                 } else {
-                                    $class = "danger";
+                                    $vlass = "danger";
                                 }
                                 ?>
-                                <div class="alert alert-<?= $class; ?>" role="alert" id="mensaje">
+                                <div class="alert alert-<?= $vlass; ?>" role="alert" id="mensaje">
                                     <i class="ion ion-information-circled"></i>
                                     <?php
                                     echo $mensaje[1];
@@ -36,14 +36,14 @@
                                 </div>
                             <?php } ?>
                             <!-- MENSAJE -->
-                            <h3>Compras - Detalle</h3>
+                            <h3>Ventas - Detalle</h3>
                             <!--CABECERA-->
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <i class="ion ion-clipboard"></i>
                                     <h3 class="box-title">Cabecera</h3>
                                     <div class="box-tools">
-                                        <a href="compras_index.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="ventas_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>                                     
                                     </div>
@@ -52,9 +52,9 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                             <?php
-                                            $idcompra = $_REQUEST['vidcompra'];
-                                            $compras = consultas::get_datos("SELECT * FROM v_compras WHERE id_compra = $idcompra ");
-                                            if (!empty($compras)) {
+                                            $idventa = $_REQUEST['vidventa'];
+                                            $ventas = consultas::get_datos("SELECT * FROM v_ventas WHERE id_venta = $idventa ");
+                                            if (!empty($ventas)) {
                                                 ?>
                                                 <div class="table-responsive">
                                                     <table class="table col-lg-12 col-md-12 col-xs-12">
@@ -62,19 +62,19 @@
                                                             <tr>
                                                                 <th class="text-center">N°</th>
                                                                 <th class="text-center">Fecha</th>
-                                                                <th class="text-center">Proveedor</th>
+                                                                <th class="text-center">Cliente</th>
                                                                 <th class="text-center">Iva</th>
                                                                 <th class="text-center">Total</th>    
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <?php foreach ($compras AS $c) { ?>
+                                                            <?php foreach ($ventas AS $v) { ?>
                                                                 <tr>
-                                                                    <td class="text-center"> <?php echo $c['id_compra']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['fecha_compra1']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['prv_razon_social']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['ivatotal']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['totalc']; ?></td>
+                                                                    <td class="text-center"> <?php echo $v['id_venta']; ?></td>
+                                                                    <td class="text-center"> <?php echo $v['fecha_venta1']; ?></td>
+                                                                    <td class="text-center"> <?php echo $v['nombres']; ?></td>
+                                                                    <td class="text-center"> <?php echo $v['ivatotal']; ?></td>
+                                                                    <td class="text-center"> <?php echo $v['totalv']; ?></td>
                                                                 </tr>
                                                             <?php } ?>
                                                         </tbody>
@@ -95,9 +95,9 @@
                                 <div class="box-body no-padding">
                                     <div class="col-lg-12 col-md-12 col-xs-12">
                                         <?php
-                                        $idcompra = $_REQUEST['vidcompra'];
-                                        $comprasdetalle = consultas::get_datos("SELECT * FROM v_compras_detalle WHERE id_compra = $idcompra");
-                                        if (!empty($comprasdetalle)) {
+                                        $idventa = $_REQUEST['vidventa'];
+                                        $ventadetalle = consultas::get_datos("SELECT * FROM v_ventas_detalle WHERE id_venta = $idventa");
+                                        if (!empty($ventadetalle)) {
                                             ?>
                                             <div class="table-responsive">
                                                 <table class="table col-lg-12 col-md-12 col-xs-12 table-bordered">
@@ -111,25 +111,25 @@
                                                             <th class="text-center">Iva 5</th>
                                                             <th class="text-center">Iva 10</th>
                                                             <th class="text-center">Exentas</th>
-                                                            <?php if ($c['estado'] == 'ACTIVO') { ?>
+                                                            <?php if ($v['estado'] == 'ACTIVO') { ?>
                                                                 <th class="text-center">Acciones</th>
                                                             <?php } ?>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <?php foreach ($comprasdetalle AS $cd) { ?>
+                                                        <?php foreach ($ventadetalle AS $vd) { ?>
                                                             <tr>
-                                                                <td class="text-center"> <?php echo $cd['pro_descri']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['dep_descri']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['cantidad']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['precio']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['subtotal']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['iva5']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['iva10']; ?></td>
-                                                                <td class="text-center"> <?php echo $cd['exentas']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['pro_descri']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['dep_descri']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['cantidad']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['precio']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['subtotal']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['iva5']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['iva10']; ?></td>
+                                                                <td class="text-center"> <?php echo $vd['exentas']; ?></td>
                                                                 <td class="text-center"> 
-                                                                    <?php if ($c['estado'] == 'ACTIVO') { ?>
-                                                                        <a onclick="quitar(<?php echo "'" . $cd['id_compra'] . "_" . $cd['pro_cod'] . "_" . $cd['id_depo'] . "'"; ?>);"
+                                                                    <?php if ($v['estado'] == 'ACTIVO') { ?>
+                                                                        <a onclick="quitar(<?php echo "'" . $vd['id_venta'] . "_" . $vd['pro_cod'] . "_" . $vd['id_depo'] . "'"; ?>);"
                                                                            class="btn btn-danger btn-sm" role="button" data-title="Quitar"
                                                                            rel="tooltip" data-placement="top" data-toggle="modal" data-target="#quitar">
                                                                             <i class="fa fa-times"></i>
@@ -149,7 +149,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php if ($c['estado'] == 'ACTIVO') { ?>
+                            <?php if ($v['estado'] == 'ACTIVO') { ?>
                                 <!--AGREGAR DETALLE-->
                                 <div class="box box-primary" style="width: 550px; height: 340px;margin: 0 auto;">
                                     <div class="box-header">
@@ -157,12 +157,12 @@
                                         <h3 class="box-title">Agregar Items</h3>
                                     </div>
                                     <div class="box-body no-padding" >
-                                        <?php if ($c['estado'] == 'ACTIVO') { ?>
+                                        <?php if ($v['estado'] == 'ACTIVO') { ?>
                                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                                                <form action="compras_detalle_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                                <form action="ventas_detalle_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                                     <div class="box-body" style="left: 1000px;">
                                                         <input type="hidden" name="voperacion" value="1"/>
-                                                        <input type="hidden" name="vidcompra" value="<?php echo $_REQUEST['vidcompra']; ?>"/>
+                                                        <input type="hidden" name="vidventa" value="<?php echo $_REQUEST['vidventa']; ?>"/>
                                                         <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
                                                             <div class="form-group">
                                                                 <label class="control-label col-lg-6 col-sm-6 col-md-6 col-xs-6">Deposito</label>
@@ -278,7 +278,7 @@
 
         function quitar(datos) {
             var dat = datos.split("_");
-            $('#si').attr('href', 'compras_detalle_control.php?vidcompra=' + dat[0] + '&vproducto=' + dat[1] + '&vdeposito=' + dat[2] + '&voperacion=2');
+            $('#si').attr('href', 'ventas_detalle_control.php?vidventa=' + dat[0] + '&vproducto=' + dat[1] + '&vdeposito=' + dat[2] + '&voperacion=2');
             $('#confirmacion').html('<span class="glyphicon glyphicon-warning-sign"></span> Desea quitar el producto del detalle <i><strong>' + dat[1] + '</strong></i>?');
         }
         function calsubtotal() {
@@ -294,7 +294,7 @@
             if (parseInt($('#idproducto').val()) > 0) {
                 $.ajax({
                     type: "GET",
-                    url: "/blitz_tecnology/compras/compras/listar_precios.php?vidproducto=" + dat[0], cache: false,
+                    url: "/blitz_tecnology/ventas/ventas/listar_precios.php?vidproducto=" + dat[0], cache: false,
                     beforeSend: function () {
                         $('#precio').html('<img src="/blitz_tecnology/img/sistema/ajax-loader.gif">\n\ <strong><i>Cargando...');
                     },
