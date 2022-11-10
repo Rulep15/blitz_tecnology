@@ -24,7 +24,7 @@ $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Lucas');
-$pdf->SetTitle('REPORTE DE COMPRAS');
+$pdf->SetTitle('REPORTE DE VENTAS');
 $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 $pdf->setPrintHeader(false);
@@ -50,7 +50,7 @@ $pdf->SetFont('times', 'B', 14);
 // AGREGAR PAGINA
 $pdf->AddPage('L', 'LEGAL');
 //celda para titulo
-$pdf->Cell(0, 0, "REPORTE DE PEDIDOS DE COMPRAS", 0, 1, 'C');
+$pdf->Cell(0, 0, "REPORTE DE PEDIDOS DE VENTAS", 0, 1, 'C');
 //SALTO DE LINEA
 $pdf->Ln();
 //COLOR DE TABLA
@@ -62,34 +62,34 @@ $pdf->SetLineWidth(0.2);
 $pdf->SetFont('', '');
 $pdf->SetFillColor(255, 255, 255);
 
-    $compras = consultas::get_datos("select * from v_compras where id_compra=" . $_REQUEST['vidcompra']."");
-    if (!empty($compras)) {
-        foreach ($compras as $compra) {
+    $ventass = consultas::get_datos("select * from v_ventas where id_venta=" . $_REQUEST['vidventa']."");
+    if (!empty($ventass)) {
+        foreach ($ventass as $ventas) {
             $pdf->SetFont('', 'B', 10);
             //columnas
             $pdf->SetFillColor(180, 180, 180);
             $pdf->Cell(20, 5, '#', 0, 0, 'C', 1);
             $pdf->Cell(80, 5, 'FECHA', 0, 0, 'C', 1);
-            $pdf->Cell(50, 5, 'PROVEEDOR', 0, 0, 'C', 1);
+            $pdf->Cell(50, 5, 'CLIENTE', 0, 0, 'C', 1);
             $pdf->Cell(50, 5, 'ESTADO', 0, 0, 'C', 1);
 
             $pdf->Ln();
 
             $pdf->SetFillColor(255, 255, 255);
             $pdf->SetFont('', '', 10);
-            $pdf->Cell(20, 5, $compra['id_compra'], 0, 0, 'C', 1);
-            $pdf->Cell(80, 5, $compra['fecha_compra'], 0, 0, 'C', 1);
-            $pdf->Cell(50, 5, $compra['prv_razon_social'], 0, 0, 'C', 1);
-            $pdf->Cell(50, 5, $compra['estado'], 0, 0, 'C', 1);
+            $pdf->Cell(20, 5, $ventas['id_venta'], 0, 0, 'C', 1);
+            $pdf->Cell(80, 5, $ventas['fecha_venta'], 0, 0, 'C', 1);
+            $pdf->Cell(50, 5, $ventas['nombres'], 0, 0, 'C', 1);
+            $pdf->Cell(50, 5, $ventas['estado'], 0, 0, 'C', 1);
 
             $pdf->Ln(); //salto 
             $pdf->Ln();
 
             $pdf->SetFont('times', 'B', 9);
-            $pdf->Cell(0, 3, 'DETALLE DE COMPRA NRO.:    ' . $compra['id_compra'], 0, 0, 'C', 0);
+            $pdf->Cell(0, 3, 'DETALLE DE VENTA NRO.:    ' . $ventas['id_venta'], 0, 0, 'C', 0);
             $pdf->Ln();
 
-            $detalles = consultas::get_datos("select * from v_compras where id_compra=" . $compra['id_compra'] . " order by id_compra");
+            $detalles = consultas::get_datos("select * from v_ventas where id_venta=" . $ventas['id_venta'] . " order by id_venta");
 
             $pdf->SetFont('', 'B', 10);
             $pdf->SetFillColor(188, 188, 188);
@@ -103,7 +103,7 @@ $pdf->SetFillColor(255, 255, 255);
 
             foreach ($detalles as $detalle) {
                 $pdf->Cell(100, 5, $detalle['nro_factura'], 1, 0, 'C', 1);
-                $pdf->Cell(100, 5, number_format($detalle['totalc'], 0, ',', '.'), 1, 0, 'C', 1);
+                $pdf->Cell(100, 5, number_format($detalle['totalv'], 0, ',', '.'), 1, 0, 'C', 1);
                 $pdf->Cell(50, 5, $detalle['ivatotal'], 1, 0, 'C', 1);
                 $pdf->Ln();
             }
@@ -120,5 +120,5 @@ $pdf->SetFillColor(255, 255, 255);
         $pdf->Cell(320, 6, 'NO SE ENCUENTRAN DATOS', 0, 0, 'C', 0);
     }
 //SALIDA AL NAVEGADOR
-$pdf->Output('reporte_compras.pdf', 'I');
+$pdf->Output('reporte_ventas.pdf', 'I');
 ?>
