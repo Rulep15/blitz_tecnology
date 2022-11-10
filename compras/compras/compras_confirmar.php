@@ -32,7 +32,7 @@
                             <form action="compras_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                 <div class="box-body">
                                     <?php $resultado = consultas::get_datos("SELECT * FROM v_compras WHERE id_compra =" . $_GET['vidcompra']); ?>
-                                    <div class="form-group-lg form-group-sm">
+                                    <div class="form-group">
                                         <input class="form-control" type="hidden" name="voperacion" value="2">
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Codigo de Compra</label>

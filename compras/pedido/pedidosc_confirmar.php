@@ -10,7 +10,7 @@
         ?>
     </HEAD>
     <BODY class="hold-transition skin-purple sidebar-mini">
-        <div class="wrapper">
+        <div class="wrapper" style="background-color: #1E282C;">
             <?php require '../../estilos/cabecera.ctp'; ?>
             <?php require '../../estilos/izquierda.ctp'; ?>
             <div class="content-wrapper" style="background-color: #333333;">
@@ -30,7 +30,7 @@
                                 <form action="pedidosc_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
                                         <?php $resultado = consultas::get_datos("SELECT * FROM v_compras_pedido WHERE id_pedido =" . $_GET['vidpedido']); ?>
-                                        <div class="form-group-lg form-group-sm">
+                                        <div class="form-group">
                                             <input class="form-control" type="hidden" name="voperacion" value="3">
 
                                             <div class="form-group">    
