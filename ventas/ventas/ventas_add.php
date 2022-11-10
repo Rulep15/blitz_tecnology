@@ -49,7 +49,7 @@
                             <form action="ventas_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                 <div class="box-body">
                                     <div class="row">
-                                        <input type="hidden" name="operacion" value="1">
+                                        <input type="hidden" name="voperacion" value="1">
 
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Codigo de Venta</label>
@@ -58,13 +58,7 @@
                                                 <input class="form-control" type="text" name="vidventa" readonly="" value="<?php echo $ventas[0]['ultimo']; ?>">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-lg-2 col-sm-2 col-xs-4">Usuario</label>
-                                            <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="hidden" name="vusuario " value="<?php echo $_SESSION['usu_cod']; ?>" />
-                                                <input class="form-control" type="text" name="vusunick" readonly="" value="<?php echo $_SESSION['usu_nick']; ?>">
-                                            </div>
-                                        </div>
+                                      
                                         
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Cliente</label>
