@@ -37,7 +37,7 @@
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <i class="ion ion-plus"></i>
-                                    <h3 class="box-title">Agregar Compras</h3>
+                                    <h3 class="box-title">Agregar Ventas</h3>
                                     <div class="box-tools">
                                         <a href="compras_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
@@ -46,7 +46,7 @@
                                 </div>
                                 <form action="compras_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <input type="hidden" name="voperacion"  value="1">
 
                                             <div class="form-group">

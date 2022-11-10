@@ -37,9 +37,9 @@
                             <div class="box box-primary" >
                                 <div class="box-header">
                                     <i class="ion ion-clipboard"></i>
-                                    <h3 class="box-title">Compras</h3>
+                                    <h3 class="box-title">Ventas</h3>
                                     <div class="box-tools">
-                                        <a href="compras_add.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="ventas_add.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-plus"></i>
                                         </a>
 
@@ -49,13 +49,13 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                             <!--BUSCADOR-->
-                                            <form action="compras_index.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                            <form action="ventas_index.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                                 <div class="box-body">
                                                     <div class="form-group">
                                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                                             <div class="input-group custom-search-form">
                                                                 <input type="search" class="form-control" name="buscar" 
-                                                                       placeholder="Buscar por codigo o proveedor..." autofocus=""/>
+                                                                       placeholder="Buscar por codigo o nombre..." autofocus=""/>
                                                                 <span class="input-group-btn">
                                                                     <button type="submit" class="btn btn-primary btn-flat" data-title="Buscar" 
                                                                             data-placement="bottom" rel="tooltip">
@@ -73,7 +73,7 @@
                                             if (isset($_REQUEST['buscar'])) {
                                                 $valor = $_REQUEST['buscar'];
                                             }
-                                            $compras = consultas::get_datos("SELECT * FROM v_compras WHERE (id_compra||TRIM(UPPER(prv_razon_social))) LIKE TRIM(UPPER('%" . $valor . "%')) ORDER BY id_compra");
+                                            $compras = consultas::get_datos("SELECT * FROM v_ventas WHERE (id_venta||TRIM(UPPER(nombres))) LIKE TRIM(UPPER('%" . $valor . "%')) ORDER BY id_venta");
                                             if (!empty($compras)) {
                                                 ?>
                                                 <div class="table-responsive">
@@ -81,30 +81,32 @@
                                                         <thead>
                                                             <tr>
                                                                 <th class="text-center">N°</th>
-                                                                <th class="text-center">Fecha</th>
-                                                                <th class="text-center">Proveedor</th>
+                                                                <th class="text-center">Usuario</th>
+                                                                <th class="text-center">Cliente</th>
                                                                 <th class="text-center">Nro Fact</th>
                                                                 <th class="text-center">Condicion</th>
                                                                 <th class="text-center">Iva Total</th>
-                                                                <th class="text-center">Total Compra</th>
+                                                                <th class="text-center">Total Venta</th>
+                                                                <th class="text-center">Estado</th>
                                                                 <th class="text-center">Acciones</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <?php foreach ($compras AS $c) { ?>
                                                                 <tr>
-                                                                    <td class="text-center"> <?php echo $c['id_compra']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['fecha_compra1']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['prv_razon_social']; ?></td>
+                                                                    <td class="text-center"> <?php echo $c['id_venta']; ?></td>
+                                                                    <td class="text-center"> <?php echo $c['usu_nick']; ?></td>
+                                                                    <td class="text-center"> <?php echo $c['fecha_venta1']; ?></td>
+                                                                    <td class="text-center"> <?php echo $c['nombres']; ?></td>
                                                                     <td class="text-center"> <?php echo $c['nro_factura']; ?></td>
                                                                     <td class="text-center"> <?php echo $c['condicion']; ?></td>
                                                                     <td class="text-center"> <?php echo $c['ivatotal']; ?></td>
-                                                                    <td class="text-center"> <?php echo $c['totalc']; ?></td>
+                                                                    <td class="text-center"> <?php echo $c['totalv']; ?></td>
 
                                                                     <td class="text-center">
                                                                       
                                                                         <?php if ($c['estado'] == 'ACTIVO' || $c['estado'] == 'ANULADO' || $c['estado'] == 'CONFIRMADO') { ?>
-                                                                            <a href="compras_detalle.php?vidcompra=<?php echo $c['id_compra']; ?>" 
+                                                                            <a href="ventas_detalle.php?vidventa=<?php echo $c['id_venta']; ?>" 
                                                                                class="btn btn-primary btn-sm" role="button"
                                                                                data-title="Detalle" rel="tooltip" data-placement="top">
                                                                                 <i class="fa  fa-list"></i>
@@ -113,11 +115,11 @@
                                                                         <?php } ?>
                                                                         <?php
                                                                         if ($c['estado'] == 'ACTIVO') {
-                                                                            $cdetalle = consultas::get_datos("SELECT * FROM compras_detalle WHERE id_compra=" . $c['id_compra']);
+                                                                            $cdetalle = consultas::get_datos("SELECT * FROM ventas_detalle WHERE id_venta=" . $c['id_venta']);
                                                                             if (!empty($cdetalle)) {
                                                                                 ?>
                                                                                 <!--?php if ($c['totalc'] > 0) { ?>-->
-                                                                                    <a href="compras_confirmar.php?vidcompra=<?php echo $c['id_compra']; ?>" 
+                                                                                    <a href="ventas_confirmar.php?vidventa=<?php echo $c['id_venta']; ?>" 
                                                                                        class="btn btn-success btn-sm" role="button"
                                                                                        data-title="Confirmar" rel="tooltip" data-placement="top">
                                                                                         <span id="confirmar" class="glyphicon glyphicon-ok-sign"></span>
@@ -129,14 +131,14 @@
                                                                         }
                                                                         ?>
                                                                         <?php if ($c['estado'] == 'CONFIRMADO') { ?>
-                                                                            <a href="compras_anular.php?vidcompra=<?php echo $c['id_compra']; ?>" 
+                                                                            <a href="ventas_anular.php?vidventa=<?php echo $c['id_venta']; ?>" 
                                                                                class="btn btn-danger btn-sm" role="button"
                                                                                data-title="Anular" rel="tooltip" data-placement="top">
                                                                                 <span  class="glyphicon glyphicon-ban-circle"></span>
                                                                             </a>
                                                                         <?php } ?>
                                                                         <?php if ($c['estado'] == 'CONFIRMADO') { ?>
-                                                                            <a href="compras_print.php?vidcompra=<?php echo $c['id_compra']; ?>" 
+                                                                            <a href="ventas_print.php?vidventa=<?php echo $c['id_venta']; ?>" 
                                                                                class="btn btn-success btn-sm" role="button"
                                                                                data-title="Impresion" rel="tooltip" data-placement="top">
                                                                                 <span  class="fa fa-print"></span>
