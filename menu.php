@@ -21,7 +21,7 @@ require './estilos/css_lte.ctp';
             <section class="content-header">
                 <section class="content">
                     <h3  style="color: white; font-size: 50px; font-family: Time New Roman; font-style: italic;">
-                        Bienvenido al PABLO <?php echo '- ', $_SESSION['nombres']; ?>
+                        Bienvenido al Sistema Pablo <?php echo '- ', $_SESSION['nombres']; ?>
                     </h3>
                     <br><br>
                     <br>
