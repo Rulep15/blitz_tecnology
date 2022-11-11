@@ -50,7 +50,7 @@ $pdf->SetFont('times', 'B', 14);
 // AGREGAR PAGINA
 $pdf->AddPage('L', 'LEGAL');
 //celda para titulo
-$pdf->Cell(0, 0, "REPORTE DE PEDIDOS DE COMPRAS", 0, 1, 'C');
+$pdf->Cell(0, 0, "REPORTE DE PEDIDOS DE VENTAS", 0, 1, 'C');
 //SALTO DE LINEA
 $pdf->Ln();
 //COLOR DE TABLA
@@ -62,7 +62,7 @@ $pdf->SetLineWidth(0.2);
 $pdf->SetFont('', '');
 $pdf->SetFillColor(255, 255, 255);
 
-    $pedidos = consultas::get_datos("select * from v_compras_pedido where id_pedido=" . $_REQUEST['vidpedido']."");
+    $pedidos = consultas::get_datos("select * from v_ventas_pedido where id_pedido=" . $_REQUEST['vidpedido']."");
     if (!empty($pedidos)) {
         foreach ($pedidos as $pedido) {
             $pdf->SetFont('', 'B', 10);

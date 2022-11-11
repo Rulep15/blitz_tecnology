@@ -30,7 +30,7 @@
                                 <form action="pedidosc_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
                                         <?php $resultado = consultas::get_datos("SELECT * FROM v_compras_pedido WHERE id_pedido =" . $_GET['vidpedido']); ?>
-                                        <div class="form-group-lg form-group-sm">
+                                        <div class="form-group">
                                             <input class="form-control" type="hidden" name="voperacion" value="4">
 
                                             <div class="form-group">    
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: right;">
-                                        <button class="btn btn-danger" type="submit">Confirmar</button>
+                                        <button class="btn btn-danger" type="submit">Anular</button>
                                     </div>
                                 </form>
                             </div>

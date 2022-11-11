@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer" style="text-align: right;">
-                                    <button class="btn btn-success" type="submit">Anular</button>
+                                    <button class="btn btn-danger" type="submit">Anular</button>
                                 </div>
                             </form>
                         </div>

@@ -50,7 +50,7 @@ $pdf->SetFont('times', 'B', 14);
 // AGREGAR PAGINA
 $pdf->AddPage('L', 'LEGAL');
 //celda para titulo
-$pdf->Cell(0, 0, "REPORTE DE PEDIDOS DE VENTAS", 0, 1, 'C');
+$pdf->Cell(0, 0, "REPORTE  DE VENTAS", 0, 1, 'C');
 //SALTO DE LINEA
 $pdf->Ln();
 //COLOR DE TABLA

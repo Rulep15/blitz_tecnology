@@ -30,7 +30,7 @@
                                 <form action="pedidosv_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
                                         <?php $resultado = consultas::get_datos("SELECT * FROM v_ventas_pedido WHERE id_pedido =" . $_GET['vidpedido']); ?>
-                                        <div class="form-group-lg form-group-sm">
+                                        <div class="form-group">
                                             <input class="form-control" type="hidden" name="operacion" value="4">
 
                                             <div class="form-group">    
