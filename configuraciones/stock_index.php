@@ -44,6 +44,10 @@
                                         <a href="stock_add.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-plus"></i>
                                         </a>
+                                         <!--AGREGAR-->
+                                         <a href="stock_print.php" class="btn btn-success pull-right btn-sm">
+                                            <i class="fa fa-print"></i>
+                                        </a>
                                     
                                     </div>
                                 </div>
