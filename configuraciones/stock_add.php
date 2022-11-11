@@ -38,38 +38,38 @@
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <i class="ion ion-plus"></i>
-                                    <h3 class="box-title">Agregar Ciudad</h3>
+                                    <h3 class="box-title">Agregar Stock</h3>
                                     <div class="box-tools">
-                                        <a href="ciudad_index.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="stock_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <form action="ciudad_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                <form action="stock_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <input type="hidden" name="voperacion"  value="1">
                                             <input type="hidden" name="vidciudad" value="0"/> 
                                             <!--CIUDAD-->
                                             <div class="form-group">
-                                                <label class="control-label col-lg-2 col-sm-2 col-xs-4">Ciudad</label>
+                                                <label class="control-label col-lg-2 col-sm-2 col-xs-4">Producto</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vciudescri" required="" style="width: 500px;" onkeypress="return soloLetras(event);" 
+                                                    <input class="form-control" type="text" name="vproducto" required="" style="width: 500px;" onkeypress="return soloLetras(event);" 
                                                            autofocus="" maxlength="30">
                                                 </div>
                                             </div>
                                             <!--PAIS-->
                                             <div class="form-group">
-                                                <label class="control-label col-lg-2 col-sm-2 col-xs-2">País</label>
+                                                <label class="control-label col-lg-2 col-sm-2 col-xs-2">Deposito</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-6">
                                                     <div class="input-group">
-                                                        <?php $pais = consultas::get_datos("SELECT * FROM ref_pais ORDER BY id_pais"); ?>
+                                                        <?php $pais = consultas::get_datos("SELECT * FROM re_deposito ORDER BY id_depo"); ?>
                                                         <select class="select2" name="vidpais" required="" style="width: 500px;">
                                                             <?php
                                                             if (!empty($pais)) {
                                                                 foreach ($pais as $p) {
                                                                     ?>
-                                                                    <option value="<?php echo $p['id_pais']; ?>"><?php echo $p['pai_descri']; ?></option>
+                                                                    <option value="<?php echo $p['id_depo']; ?>"><?php echo $p['dep_descri']; ?></option>
                                                                     <?php
                                                                 }
                                                             } else {
@@ -84,6 +84,13 @@
                                                             </button>
                                                         </span>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-2 col-sm-2 col-xs-4">Cantidad</label>
+                                                <div class="col-lg-6 col-sm-6 col-xs-7">
+                                                    <input class="form-control" type="number" name="vcantidad" required="" style="width: 500px;" 
+                                                           autofocus="" maxlength="30">
                                                 </div>
                                             </div>
 
@@ -111,7 +118,7 @@
                                 <input name="vidpais" value="0" type="hidden" id="vidmarca">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Descripcion</label>
+                                        <label class="col-sm-2 control-label">Pais</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
                                             <input type="text" class="form-control" name="vciudescri" required="" autofocus="" id="descripcion" maxlength="30" onkeypress="return soloLetras(event);">
                                         </div>

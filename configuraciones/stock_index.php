@@ -36,9 +36,16 @@
                                 </div>
                             <?php } ?>
                             <div class="box box-primary">
-                                <div class="box-header">
+                            <div class="box-header">
                                     <i class="ion ion-clipboard"></i>
                                     <h3 class="box-title">Stock</h3>
+                                    <div class="box-tools">
+                                        <!--AGREGAR-->
+                                        <a href="stock_add.php" class="btn btn-primary pull-right btn-sm">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    
+                                    </div>
                                 </div>
                                 <div class="box-body no-padding" >
                                     <div class="row">
