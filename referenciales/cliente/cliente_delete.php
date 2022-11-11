@@ -33,27 +33,10 @@
                                         <div class="form-group">
                                             <input type="hidden" name="voperacion"  value="3">
                                             <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['id_cliente']; ?>"/> 
-                                            
-                                             <div class="form-group">
-                                                <label class="control-label col-lg-2 col-sm-2 col-xs-2">Persona</label>
-                                                <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                    <div class="input-group">
-                                                        <?php $persona = consultas::get_datos("SELECT * FROM ref_persona ORDER BY id_persona"); ?>
-                                                        <select class="select2" name="vidpersona" required=""  style="width: 320px;">  
-                                                            <?php
-                                                            if (!empty($persona)) {
-                                                                foreach ($persona as $p) {
-                                                                    ?>
-                                                                    <option value="<?php echo $p['id_persona']; ?>"><?php echo $p['per_nombre']; ?></option>
-                                                                    <?php
-                                                                }
-                                                            } else {
-                                                                ?>
-                                                                <option value="">Debe seleccionar al menos una persona</option>             
-                                                            <?php }
-                                                            ?>
-                                                        </select>
-                                                    </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-2 control-label">Persona</label>
+                                                <div class="col-lg-8">
+                                                    <input class="form-control" type="text" name="vci"  readonly="" required="" value="<?php echo $resultado[0]['id_persona']; ?>">
                                                 </div>
                                             </div>
                                              <div class="form-group">
@@ -72,7 +55,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: center;">
-                                        <button class="fa fa-trash btn btn-danger pull-right" type="submit"> Anular</button>
+                                        <button class="fa fa-remove btn btn-danger pull-right" type="submit"> Inhabilitar</button>
                                     </div>
                                 </form>
                             </div>

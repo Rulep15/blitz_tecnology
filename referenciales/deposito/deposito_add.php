@@ -39,7 +39,7 @@
                                     <i class="ion ion-plus"></i>
                                     <h3 class="box-title">Agregar Deposito</h3>
                                     <div class="box-tools">
-                                        <a href="deposito_index.php" class="btn btn-danger pull-right btn-sm">
+                                        <a href="deposito_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>
                                     </div>
@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: center;">
-                                        <button class="btn btn-success pull-right" type="submit">Registrar</button>
+                                        <button class="fa fa-save btn btn-success pull-right" type="submit"> Guardar</button>
                                     </div>
                                 </form>
                             </div>
