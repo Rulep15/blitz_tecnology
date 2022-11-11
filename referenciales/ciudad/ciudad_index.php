@@ -60,7 +60,7 @@
                                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                                             <div class="input-group custom-search-form">
                                                                 <input type="search" class="form-control" name="buscar" 
-                                                                       placeholder="Buscar por nombre de producto/codigo de barra..." autofocus=""/>
+                                                                       placeholder="Buscar por codigo o por ciudad..." autofocus=""/>
                                                                 <span class="input-group-btn">
                                                                     <button type="submit" class="btn btn-primary btn-flat" data-title="Buscar" 
                                                                             data-placement="bottom" rel="tooltip">

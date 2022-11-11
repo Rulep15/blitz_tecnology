@@ -33,7 +33,7 @@
                                         <div class="form-group">
                                             <input type="hidden" name="voperacion" value="1">
                                             <input type="hidden" name="vcodigo" value="0">
-                                            <label class="col-lg-2 control-label">Nombre</label>
+                                            <label class="col-lg-2 control-label">Marca</label>
                                             <div class="col-lg-8">
                                                 <input class="form-control" type="text" name="vnombre" required="" autofocus="" onkeypress="return soloLetras(event);">
                                             </div>

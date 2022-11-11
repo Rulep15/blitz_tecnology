@@ -34,7 +34,7 @@
                                             <?php $resultado = consultas::get_datos("SELECT * FROM ref_tipo_producto WHERE id_tipro=" . $_GET['vid_tipo']); ?>
                                             <input type="hidden" name="voperacion" value="3">
                                             <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['id_tipro'];?>"/>
-                                            <label class="col-lg-2 control-label">Nombre</label>
+                                            <label class="col-lg-2 control-label">Tipo de Producto</label>
                                             <div class="col-lg-8">
                                                 <input class="form-control" type="text" name="vnombre" required="" value="<?php echo $resultado[0]['tipro_descri']; ?>"
                                                        disabled="">

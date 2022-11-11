@@ -154,7 +154,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: center;">
-                                        <button class="fa fa-save btn btn-warning" type="submit"> Guardar</button>
+                                        <button class="fa fa-save btn btn-success pull-right" type="submit"> Guardar</button>
                                     </div>
                                 </form>
                             </div>

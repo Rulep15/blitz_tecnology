@@ -54,7 +54,7 @@
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                             <!--BUSCADOR-->
-                                            <form action=empleado_index.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                            <form action="empleado_index.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                                 <div class="box-body">
                                                     <div class="form-group">
                                                         <div class="col-lg-12 col-md-12 col-xs-12">

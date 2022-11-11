@@ -34,7 +34,7 @@
                                             <?php $resultado = consultas::get_datos("SELECT * FROM ref_marca WHERE mar_cod=" . $_GET['vid_marca']); ?>
                                             <input type="hidden" name="voperacion" value="3">
                                             <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['mar_cod'];?>"/>
-                                            <label class="col-lg-2 control-label">Nombre</label>
+                                            <label class="col-lg-2 control-label">Marca</label>
                                             <div class="col-lg-8">
                                                 <input class="form-control" type="text" name="vnombre" required="" value="<?php echo $resultado[0]['mar_descri']; ?>"
                                                        disabled="">

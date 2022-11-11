@@ -47,7 +47,7 @@
                                 </div>
                                 <form action="ciudad_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <input type="hidden" name="voperacion"  value="1">
                                             <input type="hidden" name="vidciudad" value="0"/> 
                                             <!--CIUDAD-->
@@ -111,7 +111,7 @@
                                 <input name="vidpais" value="0" type="hidden" id="vidmarca">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Descripcion</label>
+                                        <label class="col-sm-2 control-label">Pais</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
                                             <input type="text" class="form-control" name="vciudescri" required="" autofocus="" id="descripcion" maxlength="30" onkeypress="return soloLetras(event);">
                                         </div>

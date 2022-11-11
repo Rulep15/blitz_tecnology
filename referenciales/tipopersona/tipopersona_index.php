@@ -60,7 +60,7 @@
                                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                                             <div class="input-group custom-search-form">
                                                                 <input type="search" class="form-control" name="buscar" 
-                                                                       placeholder="Buscar..." autofocus=""/>
+                                                                       placeholder="Buscar por codigo o tipo de persona..." autofocus=""/>
                                                                 <span class="input-group-btn">
                                                                     <button type="submit" class="btn btn-primary btn-flat" data-title="Buscar" 
                                                                             data-placement="bottom" rel="tooltip">
@@ -138,7 +138,7 @@
                             <input name="vidtipoper" value="0" type="hidden">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descripcion</label>
+                                    <label class="col-sm-2 control-label">Tipo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
                                         <input type="text" class="form-control" name="vtipopdescri" required="" autofocus="" onkeypress="return soloLetras(event);">
                                     </div>
@@ -166,7 +166,7 @@
                             <input name="vidtipoper" value="0" type="hidden" id="codigo">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descripcion</label>
+                                    <label class="col-sm-2 control-label">Tipo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
                                         <input type="text" class="form-control" name="vtipopdescri" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">

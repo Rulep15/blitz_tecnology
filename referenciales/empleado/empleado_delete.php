@@ -130,7 +130,7 @@
 
                                     </div>
                                     <div class = "box-footer">
-                                        <button class = "fa fa-save btn btn-danger pull-right" type = "submit"> Guardar</button>
+                                        <button class = "fa fa-remove btn btn-danger pull-right" type = "submit"> Inhabilitar</button>
 
                                     </div>
                                 </form>

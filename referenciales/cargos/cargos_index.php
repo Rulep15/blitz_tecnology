@@ -60,7 +60,7 @@
                                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                                             <div class="input-group custom-search-form">
                                                                 <input type="search" class="form-control" name="buscar" 
-                                                                       placeholder="Buscar..." autofocus=""/>
+                                                                       placeholder="Buscar por codigo o cargo..." autofocus=""/>
                                                                 <span class="input-group-btn">
                                                                     <button type="submit" class="btn btn-primary btn-flat" data-title="Buscar" 
                                                                         data-placement="bottom" rel="tooltip">
@@ -139,7 +139,7 @@
                             <input name="vidcargo" value="0" type="hidden" id="vidcargo" >
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descripcion</label>
+                                    <label class="col-sm-2 control-label">Cargo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
                                         <input type="text" class="form-control" name="vcardescri" required="" id="vcardescri" onkeypress="return soloLetras(event)">
                                     </div>
@@ -167,15 +167,15 @@
                             <input name="vidcargo" value="0" type="hidden" id="codigo">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descripcion</label>
+                                    <label class="col-sm-2 control-label">Cargo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
                                         <input type="text" class="form-control" name="vcardescri" required="" 
-                                               id="vcardescri"  onkeypress="return soloLetras(event);">
+                                               id="descripcion"  onkeypress="return soloLetras(event);">
                                     </div>
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar1">Cerrar</button>
+                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar1">Cerrar</button>
                                 <button type="submit" class="fa fa-save btn btn-success pull-right">Grabar</button>
                             </div>
                         </form>

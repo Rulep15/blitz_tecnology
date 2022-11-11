@@ -60,7 +60,7 @@
                                                         <div class="col-lg-12 col-md-12 col-xs-12">
                                                             <div class="input-group custom-search-form">
                                                                 <input type="search" class="form-control" name="buscar" 
-                                                                       placeholder="Buscar..." autofocus=""/>
+                                                                       placeholder="Buscar por codigo o tipo o porcentaje...." autofocus=""/>
                                                                 <span class="input-group-btn">
                                                                     <button type="submit" class="btn btn-primary btn-flat" data-title="Buscar" 
                                                                         data-placement="bottom" rel="tooltip">
@@ -140,7 +140,7 @@
                             <input name="vidtimp" value="0" type="hidden">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descripcion<br><br>Porcentaje</label>
+                                    <label class="col-sm-2 control-label">Tipo<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
                                         <input type="text" class="form-control" name="vtdescripcion" required="" autofocus="" onkeypress="return soloLetras(event);">
                                         <input type="number" class="form-control" name="vporcentaje" required="" autofocus="">
@@ -169,7 +169,7 @@
                             <input name="vidtimp" value="0" type="hidden" id="codigo">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Descripcion<br><br>Porcentaje</label>
+                                    <label class="col-sm-2 control-label">Tipo<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
                                         <input type="text" class="form-control" name="vtdescripcion" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">
