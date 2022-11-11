@@ -33,51 +33,34 @@
                                         <div class="form-group">
                                             <input type="hidden" name="voperacion"  value="3">
                                             <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['prv_cod']; ?>"/> 
-                                            
-                                             <div class="form-group">
-                                                <label class="control-label col-lg-2 col-sm-2 col-xs-2">Ciudad</label>
-                                                <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                    <div class="input-group">
-                                                        <?php $ciudad = consultas::get_datos("SELECT * FROM ref_ciudad ORDER BY id_ciudad"); ?>
-                                                        <select class="select2" name="vciudad" required="" style="width: 320px;">  
-                                                            <?php
-                                                            if (!empty($ciudad)) {
-                                                                foreach ($ciudad as $c) {
-                                                                    ?>
-                                                                    <option value="<?php echo $c['id_ciudad']; ?>"><?php echo $c['ciu_descri']; ?></option>
-                                                                    <?php
-                                                                }
-                                                            } else {
-                                                                ?>
-                                                                <option value="">Debe seleccionar al menos una ciudad</option>             
-                                                            <?php }
-                                                            ?>
-                                                        </select>
-                                                    </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-2 control-label">Ciudad</label>
+                                                <div class="col-lg-8">
+                                                    <input class="form-control" readonly type="text" name="vrazon" required="" value="<?php echo $resultado[0]['id_ciudad']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Razon Social</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vrazon" required="" value="<?php echo $resultado[0]['prv_razon_social']; ?>">
+                                                    <input class="form-control" readonly type="text" name="vrazon" required="" value="<?php echo $resultado[0]['prv_razon_social']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">RUC</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="number" name="vruc" required="" min="0" value="<?php echo $resultado[0]['prv_ruc']; ?>">
+                                                    <input class="form-control" readonly type="number" name="vruc" required="" min="0" value="<?php echo $resultado[0]['prv_ruc']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Direccion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vdireccion" required="" value="<?php echo $resultado[0]['prv_direccion']; ?>">
+                                                    <input class="form-control" readonly type="text" name="vdireccion" required="" value="<?php echo $resultado[0]['prv_direccion']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Telefono</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="number" name="vtelefono" required="" min="0" value="<?php echo $resultado[0]['prv_tel']; ?>">
+                                                    <input class="form-control" readonly type="number" name="vtelefono" required="" min="0" value="<?php echo $resultado[0]['prv_tel']; ?>">
                                                 </div>
                                             </div>  
                                         </div>
