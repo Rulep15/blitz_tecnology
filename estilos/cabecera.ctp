@@ -56,7 +56,7 @@
                         <!-- acciones dentro del menu emergente-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default" style="color:blue;"> Ayuda </a>
+                                <a href="./ayuda/manual blitz_tecnology_lucas.pdf " class="btn btn-default" style="color:blue;"> Ayuda </a>
                             </div>
                             <div class="pull-right">
                                 <a href="/blitz_tecnology" class="btn btn-default" style="color: red;"> Salir </a>
