@@ -47,7 +47,7 @@
                                 </div>
                                 <form action="persona_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class=row">
+                                        <div class="row">
                                             <?php $resultado = consultas::get_datos("SELECT * FROM v_ref_persona WHERE id_persona =" . $_GET['vidpersona']); ?>
 
                                             <input type="hidden" name="voperacion" value="2">
@@ -138,7 +138,7 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">R.U.C</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vruc" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="20">
                                                 </div>
                                             </div>
                                             <div class="form-group">

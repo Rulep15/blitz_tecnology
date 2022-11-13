@@ -59,19 +59,19 @@
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Sucursal</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vsucursal" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['suc_descri']; ?>">
+                                                    <input maxlength="30" class="form-control" type="text" name="vsucursal" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['suc_descri']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Telefono</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="number" name="vtelefono" required="" min="0" value="<?php echo $resultado[0]['suc_telefono']; ?>">
+                                                    <input maxlength="30" class="form-control" type="number" name="vtelefono" required="" min="0" value="<?php echo $resultado[0]['suc_telefono']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Direccion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vdireccion" required=""  value="<?php echo $resultado[0]['suc_direccion']; ?>">
+                                                    <input maxlength="30" class="form-control" type="text" name="vdireccion" required=""  value="<?php echo $resultado[0]['suc_direccion']; ?>">
                                                 </div>
                                             </div>
                                             

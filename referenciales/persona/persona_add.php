@@ -136,7 +136,7 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">R.U.C</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vruc" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="20">
                                                 </div>
                                             </div>
                                             <div class="form-group">

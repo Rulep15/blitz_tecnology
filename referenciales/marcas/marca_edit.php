@@ -36,7 +36,7 @@
                                             <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['mar_cod'];?>"/>
                                             <label class="col-lg-2 control-label">Marca</label>
                                             <div class="col-lg-8">
-                                                <input class="form-control" type="text" name="vnombre" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['mar_descri']; ?>">
+                                                <input maxlength="30" class="form-control" type="text" name="vnombre" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['mar_descri']; ?>">
                                             </div>
                                         </div>
                                     </div>

@@ -81,19 +81,19 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Sucursal</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vsucursal" required="" onkeypress="return soloLetras(event);">
+                                                    <input maxlength="30" class="form-control" type="text" name="vsucursal" required="" onkeypress="return soloLetras(event);">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Telefono</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="number" name="vtelefono" required="">
+                                                    <input maxlength="30" class="form-control" type="number" name="vtelefono" required="">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Direccion</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vdireccion" required="">
+                                                    <input maxlength="30" class="form-control" type="text" name="vdireccion" required="">
                                                 </div>
                                             </div>
                                         </div>
@@ -120,7 +120,7 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">Descripcion</label>
                                         <div class="col-xs-10 col-md-10 col-lg-10">
-                                            <input type="text" class="form-control" name="vdireccion" required="" autofocus="" id="vciudescri" onkeypress="return soloLetras(event);">
+                                            <input maxlength="30" type="text" class="form-control" name="vdireccion" required="" autofocus="" id="vciudescri" onkeypress="return soloLetras(event);">
                                         </div>
                                     </div>
                                 </div>

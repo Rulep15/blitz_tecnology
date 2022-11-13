@@ -166,7 +166,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Descripcion</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vdescripcion" required=""  onkeypress="return soloLetras(event);">
+                                                    <input maxlength="250" class="form-control" type="text" name="vdescripcion" required=""  onkeypress="return soloLetras(event);">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -184,7 +184,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Imagen</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="file" name="vimagen" required="" min="0"
+                                                    <input maxlength="100" class="form-control" type="file" name="vimagen" required="" min="0"
                                                            placeholder="Seleccione una imagen">
                                                 </div>
                                             </div>

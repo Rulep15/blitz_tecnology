@@ -70,7 +70,7 @@
                                                             ?>
                                                         </select>
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-primary btn-flat" type="button" data-toggle="modal" data-target="#registrar_sucursal">
+                                                            <button class="btn btn-primary btn-flat"  type="button" data-toggle="modal" data-target="#registrar_sucursal">
                                                                 <i class="fa fa-plus"></i>
                                                             </button>
                                                         </span>
@@ -83,7 +83,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Descripcion</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vdescripcion" required="" onkeypress="return soloLetras(event);" >
+                                                    <input maxlength="30" class="form-control" type="text" name="vdescripcion" required="" onkeypress="return soloLetras(event);" >
                                                 </div>
                                             </div>
                                             

@@ -59,25 +59,25 @@
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Razon Social</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vrazon" required="" value="<?php echo $resultado[0]['prv_razon_social']; ?>">
+                                                    <input maxlength="30" class="form-control" type="text" name="vrazon" required="" value="<?php echo $resultado[0]['prv_razon_social']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">RUC</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="number" name="vruc" required="" min="0" value="<?php echo $resultado[0]['prv_ruc']; ?>">
+                                                    <input maxlength="15" class="form-control" type="number" name="vruc" required="" min="0" value="<?php echo $resultado[0]['prv_ruc']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Direccion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vdireccion" required="" value="<?php echo $resultado[0]['prv_direccion']; ?>">
+                                                    <input maxlength="100" class="form-control" type="text" name="vdireccion" required="" value="<?php echo $resultado[0]['prv_direccion']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Telefono</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="number" name="vtelefono" required="" min="0" value="<?php echo $resultado[0]['prv_tel']; ?>">
+                                                    <input maxlength="30" class="form-control" type="number" name="vtelefono" required="" min="0" value="<?php echo $resultado[0]['prv_tel']; ?>">
                                                 </div>
                                             </div>
                                         </div>

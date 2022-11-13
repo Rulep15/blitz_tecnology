@@ -141,7 +141,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Cargo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vcardescri" required="" id="vcardescri" onkeypress="return soloLetras(event)">
+                                        <input maxlength="30" type="text" class="form-control" name="vcardescri" required="" id="vcardescri" onkeypress="return soloLetras(event)">
                                     </div>
                                 </div>
                             </div>

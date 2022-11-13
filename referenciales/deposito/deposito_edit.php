@@ -38,7 +38,7 @@
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Descripcion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vdescripcion" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['dep_descri']; ?>">
+                                                    <input class="form-control" maxlength="30" type="text" name="vdescripcion" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['dep_descri']; ?>">
                                                 </div>
                                             </div>
                                             

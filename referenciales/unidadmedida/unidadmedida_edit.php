@@ -34,9 +34,9 @@
                                             <?php $resultado = consultas::get_datos("SELECT * FROM ref_unidadmedida WHERE id_um=" . $_GET['vid_unidad']); ?>
                                             <input type="hidden" name="voperacion" value="2">
                                             <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['id_um'];?>"/>
-                                            <label class="col-lg-2 control-label">Nombre</label>
+                                            <label class="col-lg-2 control-label">Unidad de Medida</label>
                                             <div class="col-lg-8">
-                                                <input class="form-control" type="text" name="vnombre" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['descripcion']; ?>">
+                                                <input maxlength="30" class="form-control" type="text" name="vnombre" required="" onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['descripcion']; ?>">
                                             </div>
                                         </div>
                                     </div>

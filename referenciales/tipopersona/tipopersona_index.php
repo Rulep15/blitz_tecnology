@@ -140,7 +140,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tipo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtipopdescri" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                        <input maxlength="30" type="text" class="form-control" name="vtipopdescri" required="" autofocus="" onkeypress="return soloLetras(event);">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tipo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtipopdescri" required="" onkeypress="return soloLetras(event);" 
+                                        <input maxlength="30" type="text" class="form-control" name="vtipopdescri" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">
                                     </div>
                                 </div>

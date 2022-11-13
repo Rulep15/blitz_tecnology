@@ -35,7 +35,7 @@
                                             <input type="hidden" name="vcodigo" value="0">
                                             <label class="col-lg-2 control-label">Pais</label>
                                             <div class="col-lg-8">
-                                                <input class="form-control" type="text" name="vnombre" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                                <input maxlength="30" class="form-control" type="text" name="vnombre" required="" autofocus="" onkeypress="return soloLetras(event);">
                                             </div>
                                         </div>
                                     </div>

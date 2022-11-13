@@ -42,7 +42,7 @@
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Descripcion</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="text" name="vdescripcion" required=""  onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['pro_descri']; ?>">
+                                                    <input maxlength="250" class="form-control" type="text" name="vdescripcion" required=""  onkeypress="return soloLetras(event);" value="<?php echo $resultado[0]['pro_descri']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -148,7 +148,7 @@
                                             <div class="form-group">
                                                 <label class="col-lg-2 control-label">Imagen</label>
                                                 <div class="col-lg-8">
-                                                    <input class="form-control" type="file" name="vimagen" required="">
+                                                    <input maxlength="100" class="form-control" type="file" name="vimagen" required="">
                                                 </div>
                                             </div>
                                         </div>

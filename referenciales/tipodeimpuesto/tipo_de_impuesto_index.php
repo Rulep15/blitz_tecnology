@@ -142,7 +142,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tipo<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtdescripcion" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                        <input maxlength="30" type="text" class="form-control" name="vtdescripcion" required="" autofocus="" onkeypress="return soloLetras(event);">
                                         <input type="number" class="form-control" name="vporcentaje" required="" autofocus="">
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tipo<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vtdescripcion" required="" onkeypress="return soloLetras(event);" 
+                                        <input maxlength="30" type="text" class="form-control" name="vtdescripcion" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">
                                         <input type="number" class="form-control" name="vporcentaje" required="" 
                                                id="porcentaje">

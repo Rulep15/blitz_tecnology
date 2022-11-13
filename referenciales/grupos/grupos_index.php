@@ -141,7 +141,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Grupo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vgrudescri" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                        <input maxlength="40" type="text" class="form-control" name="vgrudescri" required="" autofocus="" onkeypress="return soloLetras(event);">
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +169,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Grupo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input type="text" class="form-control" name="vgrudescri" required="" onkeypress="return soloLetras(event);" 
+                                        <input type="text" maxlength="40"   class="form-control" name="vgrudescri" required="" onkeypress="return soloLetras(event);" 
                                                id="descripcion">
                                     </div>
                                 </div>

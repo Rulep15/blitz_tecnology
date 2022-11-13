@@ -86,25 +86,25 @@
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Razon Social</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="text" name="vrazon" required="" placeholder="Ingresar Razon Social">
+                                                <input maxlength="30" class="form-control" type="text" name="vrazon" required="" placeholder="Ingresar Razon Social">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">RUC</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="number" name="vruc" required="" min="0">
+                                                <input maxlength="15" class="form-control" type="number" name="vruc" required="" min="0">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Direccion</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="text" name="vdireccion" required="">
+                                                <input maxlength="100" class="form-control" type="text" name="vdireccion" required="">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Telefono</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="number" name="vtelefono" required="" min="0">
+                                                <input maxlength="30" class="form-control" type="number" name="vtelefono" required="" min="0">
                                             </div>
                                         </div>
                                     </div>
