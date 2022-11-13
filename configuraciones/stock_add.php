@@ -5,15 +5,15 @@
         <meta charset="utf-8">
         <meta content="width=devicewidth, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <?php
-        include '../../conexion.php';
-        require '../../estilos/css_lte.ctp';
+        include '../conexion.php';
+        require '../estilos/css_lte.ctp';
         ?>
    
     </HEAD>
     <BODY class="hold-transition skin-purple sidebar-mini">
         <div id="wrapper" style="background-color: #1E282C">
-            <?php require '../../estilos/cabecera.ctp'; ?>
-            <?php require '../../estilos/izquierda.ctp'; ?>
+            <?php require '../estilos/cabecera.ctp'; ?>
+            <?php require '../estilos/izquierda.ctp'; ?>
             <div class="content-wrapper" style="background-color: #333333">
                 <div class="content">
                     <div class="row">
@@ -63,7 +63,7 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-2">Deposito</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-6">
                                                     <div class="input-group">
-                                                        <?php $pais = consultas::get_datos("SELECT * FROM re_deposito ORDER BY id_depo"); ?>
+                                                        <?php $pais = consultas::get_datos("SELECT * FROM ref_deposito ORDER BY id_depo"); ?>
                                                         <select class="select2" name="vidpais" required="" style="width: 500px;">
                                                             <?php
                                                             if (!empty($pais)) {
@@ -78,11 +78,7 @@
                                                             <?php }
                                                             ?>
                                                         </select>
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-primary btn-flat btn-sm" type="button" data-toggle="modal" data-target="#registrar_pais">
-                                                                <i class="fa fa-plus"></i>
-                                                            </button>
-                                                        </span>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>
