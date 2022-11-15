@@ -56,7 +56,7 @@ $pdf->SetFillColor(255, 255, 255);
 //CONSULTA A LA BASE DE DATOS
 $sqls = consultas::get_datos("SELECT * FROM v_ref_stock ORDER BY pro_cod");
 foreach ($sqls AS $sql) {
-    $pdf->Cell(80, 5, $sql['pro_cod'], 1, 0, 'C', 1);
+    $pdf->Cell(80, 5, $sql['pro_descri'], 1, 0, 'C', 1);
     $pdf->Cell(80, 5, $sql['st_cantidad'], 1, 0, 'C', 1);
     $pdf->Cell(80, 5, $sql['dep_descri'], 1, 0, 'C', 1);
     $pdf->ln();

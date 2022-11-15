@@ -103,7 +103,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Cantidad</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                <input class="form-control" type="number" name="vcantidad" required="" style="width: 500px;" autofocus="" maxlength="30">
+                                                <input class="form-control" value="1" type="number" name="vcantidad" required="" style="width: 500px;" min="1" autofocus="" maxlength="30">
                                             </div>
                                         </div>
 
@@ -122,9 +122,9 @@
 
         </div>
     </div>
-    <?php require '../../estilos/pie.ctp'; ?>
+    <?php require '../estilos/pie.ctp'; ?>
 </BODY>
-<?php require '../../estilos/js_lte.ctp'; ?>
+<?php require '../estilos/js_lte.ctp'; ?>
 <script>
     /*MENSAJE DE INSERT MARCAS, TIPO,. ETC*/
     $("#mensaje").delay(1000).slideUp(200, function() {

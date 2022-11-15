@@ -132,7 +132,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" arial-label="Close">X</button>
                             <h4 class="modal-title"><strong>Registrar Tipo de Impuesto</strong></h4>
                         </div>
                         <form action="tipo_de_impuesto_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
@@ -142,13 +141,13 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Tipo<br><br>Porcentaje</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input maxlength="30" type="text" class="form-control" name="vtdescripcion" required="" autofocus="" onkeypress="return soloLetras(event);">
-                                        <input type="number" class="form-control" name="vporcentaje" required="" autofocus="">
+                                        <input maxlength="30" type="text" class="form-control" name="vtdescripcion" id="vtdescripcion" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                        <input type="number" class="form-control" name="vporcentaje" id="vporcentaje" required="" autofocus="">
                                     </div>
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger"> Cerrar</button>
+                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_tipo"> Cerrar</button>
                                 <button type="submit" class="fa fa-save btn btn-success pull-right"> Guardar</button>
                             </div>
                         </form>
@@ -161,7 +160,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" arial-label="Close">X</button>
                             <h4 class="modal-title"><strong>Editar Tipo de Impuesto</strong></h4>
                         </div>
                         <form action="tipo_de_impuesto_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
@@ -192,7 +190,6 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" arial-label="Close">X</button>
                             <h4 class="modal-title custom_align" id="Heading">Atencion!!!</h4>
                         </div>
                         <div class="modal-body">
@@ -260,5 +257,11 @@
             return false;
         }
     }
-</script>   
+</script>
+<SCRIPT>
+       /*limpiar campos al cerrar nuestro modal*/
+        $("#cerrar_tipo").click(function(){
+            $('#vtdescripcion, #vporcentaje').val("");
+    });
+    </script>
 </HTML>

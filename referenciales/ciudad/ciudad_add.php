@@ -103,7 +103,6 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="cerrar close" data-dismiss='modal' id="cerrar_agregar" arial-label="Close">X</button>
                                 <h4 class="modal-title"><strong>Registrar Pais</strong></h4>
                             </div>
                             <form action="ciudad_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">

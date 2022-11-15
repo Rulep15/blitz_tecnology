@@ -54,8 +54,8 @@
                                             <div class ="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">C.I</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vci" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                    <input class="form-control" type="number" name="vci" required="" style="width: 500px;" 
+                                                           autofocus="" maxlength="30" onkeypress="return controltag(event);">
                                                 </div>
                                             </div>    
                                             <div class="form-group">
@@ -135,7 +135,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">R.U.C</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vruc" required="" style="width: 500px;" 
+                                                    <input class="form-control" type="number" name="vruc" required="" style="width: 500px;" 
                                                            autofocus="" maxlength="20">
                                                 </div>
                                             </div>
@@ -149,7 +149,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Telefono</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input class="form-control" type="text" name="vtelefono" required="" style="width: 500px;" 
+                                                    <input class="form-control" type="number" name="vtelefono" required="" style="width: 500px;" 
                                                            autofocus="" maxlength="30">
                                                 </div>
                                             </div>
@@ -172,7 +172,7 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Fecha de Nacimiento</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="date" name="vfechanac" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" max="01/01/2020">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -326,4 +326,15 @@
             $('#ciudescri').val("");
         });
     </script>
+    <script type="text/javascript"> function controltag(e) {
+        tecla = (document.all) ? e.keyCode : e.which;
+        if (tecla==8) return true;
+        else if (tecla==0||tecla==9)  return true;
+       // patron =/[0-9\s]/;// -> solo letras
+        patron =/[0-9\s]/;// -> solo numeros
+        te = String.fromCharCode(tecla);
+        return patron.test(te);
+    }
+	</script>
+
 </HTML>

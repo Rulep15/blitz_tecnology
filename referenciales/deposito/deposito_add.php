@@ -132,7 +132,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_sucursal">Cerrar</button>
+                                    <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_sucursal">Cerrar</button>
                                     <button type="submit" class="fa fa-save btn btn-success pull-right"> Guardar</button>
                                 </div>
                             </form>

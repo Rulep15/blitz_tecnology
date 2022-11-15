@@ -131,7 +131,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" arial-label="Close">X</button>
+                           
                             <h4 class="modal-title"><strong>Registrar Grupos</strong></h4>
                         </div>
                         <form action="grupos_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
@@ -141,12 +141,12 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Grupo</label>
                                     <div class="col-xs-10 col-md-10 col-lg-10">
-                                        <input maxlength="40" type="text" class="form-control" name="vgrudescri" required="" autofocus="" onkeypress="return soloLetras(event);">
+                                        <input maxlength="40" type="text" class="form-control" name="vgrudescri" id="vgrudescri" required="" autofocus="" onkeypress="return soloLetras(event);">
                                     </div>
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger"> Cerrar</button>
+                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_grupo"> Cerrar</button>
                                 <button type="submit" class="fa fa-save btn btn-success pull-right"> Guardar</button>
                             </div>
                         </form>
@@ -159,7 +159,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" arial-label="Close">X</button>
+                            
                             <h4 class="modal-title"><strong>Editar Grupos</strong></h4>
                         </div>
                         <form action="grupos_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
@@ -255,5 +255,12 @@
             return false;
         }
     }
-</script>   
+     
+</script> 
+<SCRIPT>
+       /*limpiar campos al cerrar nuestro modal*/
+        $("#cerrar_grupo").click(function(){
+            $('#vidgrupo, #vgrudescri').val("");
+    });
+    </script>
 </HTML>

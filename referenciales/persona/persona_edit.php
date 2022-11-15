@@ -57,14 +57,14 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">C.I</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vci" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" onkeypress="return controltag(event); " value="<?php echo $resultado[0]['per_nro_doc']; ?>">
                                                 </div>
                                             </div>    
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Nombre</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vnombre" required="" style="width: 500px;" onkeypress="return soloLetras(event);" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['per_nombre']; ?>">
                                                 </div>
 
                                             </div>   
@@ -74,7 +74,7 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Apellido</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vapellido" required="" style="width: 500px;" onkeypress="return soloLetras(event);" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['per_apellido']; ?>">
                                                 </div>
                                             </div>
                                             <!--CIUDAD-->
@@ -138,50 +138,50 @@
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">R.U.C</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vruc" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="20">
+                                                           autofocus="" maxlength="20" value="<?php echo $resultado[0]['per_ruc']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Direccion</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vdireccion" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['per_direccion']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Telefono</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vtelefono" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['per_telefono']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Email</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vcorreo" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['per_email']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Sexo</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
-                                                    <input type="radio" name="vsexo" value="Masculino">Masculino</input>
+                                                    <input type="radio" name="vsexo" value="Masculino" value="<?php echo $resultado[0]['per_sexo']; ?>">Masculino</input>
                                                     <br>
-                                                    <input type="radio" name="vsexo" value="Femenino">Femenino</input>
+                                                    <input type="radio" name="vsexo" value="Femenino" value="<?php echo $resultado[0]['per_sexo']; ?>">Femenino</input>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Fecha de Nacimiento</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="date" name="vfechanac" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['per_fecha_nacimiento']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-lg-2 col-sm-2 col-xs-4">Razon Social</label>
                                                 <div class="col-lg-6 col-sm-6 col-xs-7">
                                                     <input class="form-control" type="text" name="vrazons" required="" style="width: 500px;" 
-                                                           autofocus="" maxlength="30">
+                                                           autofocus="" maxlength="30" value="<?php echo $resultado[0]['razon_social']; ?>">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -315,4 +315,14 @@
 
 
     </script>
+       <script type="text/javascript"> function controltag(e) {
+        tecla = (document.all) ? e.keyCode : e.which;
+        if (tecla==8) return true;
+        else if (tecla==0||tecla==9)  return true;
+       // patron =/[0-9\s]/;// -> solo letras
+        patron =/[0-9\s]/;// -> solo numeros
+        te = String.fromCharCode(tecla);
+        return patron.test(te);
+    }
+	</script>
 </HTML>
