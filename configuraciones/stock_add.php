@@ -52,8 +52,8 @@
                                     <div class="row">
                                         <input type="hidden" name="operacion" value="1">
                                         <input type="hidden" name="vproducto" value="0" />
-                                         <!--Producto-->
-                                         <div class="form-group">
+                                        <!--Producto-->
+                                        <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-2">Producto</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-6">
                                                 <div class="input-group">
@@ -76,8 +76,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                          <!--Deposito-->
-                                          <div class="form-group">
+                                        <!--Deposito-->
+                                        <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-2">Deposito</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-6">
                                                 <div class="input-group">

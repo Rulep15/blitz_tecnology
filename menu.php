@@ -20,7 +20,7 @@ require './estilos/css_lte.ctp';
         <div class="content-wrapper" style="background-color: #272829;">
             <section class="content-header">
                 <section class="content">
-                    <h3  style="color: white; font-size: 50px; font-family: Time New Roman; font-style: italic;">
+                    <h3 style="color: white; font-size: 50px; font-family: Time New Roman; font-style: italic;">
                         Bienvenido al Sistema <?php echo '- ', $_SESSION['nombres']; ?>
                     </h3>
                     <br><br>

@@ -121,4 +121,3 @@ $pdf->SetFillColor(255, 255, 255);
     }
 //SALIDA AL NAVEGADOR
 $pdf->Output('reporte_pedidos.pdf', 'I');
-?>
