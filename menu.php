@@ -25,7 +25,6 @@ require './estilos/css_lte.ctp';
                     </h3>
                     <br><br>
                     <br>
-                    <img src="./img/menu/menu1.gif" style="width: 900px; height: 500px;">
                 </section>
             </section>
         </div>
