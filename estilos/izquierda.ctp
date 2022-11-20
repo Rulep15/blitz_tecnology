@@ -1,12 +1,12 @@
 <aside class="main-sidebar" style="background-color:#1e282c;">
-    <section class="sidebar" style="" >
+    <section class="sidebar" >
         <div class="user-panel">
             <div class="pull-left image">
                 <img src="<?php
                 if (!empty($_SESSION['usu_foto'])) {
                     echo $_SESSION['usu_foto'];
                 } else {
-                    echo "/blitz_tecnology/img/sistema/nodisponible.jpg";
+                    echo "/T.A/img/sistema/nodisponible.jpg";
                 }
                 ?>" class="img-circle" alt="Imagen de Usuario">
             </div>
@@ -21,7 +21,7 @@
     <li> <a></a></li>
         </div>
         <ul class="sidebar-menu">
-            <li><a href="/blitz_tecnology/menu.php" class="fa fa-home"><span class="logo-lg"><strong> INICIO</strong></span> </a></li>
+            <li><a href="/T.A/menu.php" class="fa fa-home"><span class="logo-lg"><strong> INICIO</strong></span> </a></li>
             <?php $modulos = consultas::get_datos("select distinct(mod_cod),(mod_nombre) from v_permisos where gru_cod =" . $_SESSION['gru_cod'] . " order by mod_cod"); ?>  
             <?php if (!empty($modulos)) { ?>
                 <?php foreach ($modulos as $modulo) { ?>

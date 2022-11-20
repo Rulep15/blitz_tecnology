@@ -1,7 +1,7 @@
 <header class="main-header">   
     <a href="#" class="logo">
-        <span class="logo-mini"><b>Blitz Tecnology</b></span>
-        <span class="logo-lg">Blitz Tecnology</span>
+        <span class="logo-mini"><b>T.A</b></span>
+        <span class="logo-lg">T.A</span>
     </a>
     <nav class="navbar navbar-static-top" role="navigation">
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -16,7 +16,7 @@
                         if (!empty($_SESSION['usu_foto'])) {
                             echo $_SESSION['usu_foto'];
                         } else {
-                            echo "/lp3/img/sistema/nodisponible.jpg";
+                            echo "/T.A/img/sistema/nodisponible.jpg";
                         }
                         ?>" class="user-image" alt="User Image">
                         <span class="hidden-xs"><?php echo $_SESSION['usu_nick']; ?></span>
@@ -27,7 +27,7 @@
                             if (!empty($_SESSION['usu_foto'])) {
                                 echo $_SESSION['usu_foto'];
                             } else {
-                                echo "/lp3/img/no_disponible.jpg";
+                                echo "/T.A/img/no_disponible.jpg";
                             }
                             ?>" 
                                  class="img-circle" alt="User Image">
@@ -56,10 +56,10 @@
                         <!-- acciones dentro del menu emergente-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="/blitz_tecnology/ayuda/manual blitz_tecnology_lucas.pdf " class="btn btn-default" style="color:blue;"> Ayuda </a>
+                                <a href="/T.A/ayuda/manual blitz_tecnology_lucas.pdf " class="btn btn-default" style="color:blue;"> Ayuda </a>
                             </div>
                             <div class="pull-right">
-                                <a href="/blitz_tecnology" class="btn btn-default" style="color: red;"> Salir </a>
+                                <a href="/T.A" class="btn btn-default" style="color: red;"> Salir </a>
                             </div>
                         </li>
                     </ul>

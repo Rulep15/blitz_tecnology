@@ -28,7 +28,7 @@ if ($_SESSION) {
             -mos-box-shadow: 0px 0px 10px 0px rgb(48, 50, 50, 0.48);
             box-shadow: 0px 0px 10px 0px rgb(48, 50, 50, 0.48);
             border-radius: 6%;
-            border-color: #00ACD6;
+            border-color: #FFDE59;
             background-color: #181818;
         }
 
@@ -38,8 +38,8 @@ if ($_SESSION) {
             margin: 0px auto 10px;
             display: block;
             border-radius: 90px;
-            border-color: #00ACD6;
-            background-color: #00C9FF;
+            border-color: #FFDE59;
+            background-color: #FFDE59;
         }
 
         .login {
@@ -55,7 +55,7 @@ if ($_SESSION) {
     <div class="container well" id="sha">
         <div class="row">
             <div class="col-xs-12">
-                <img class="img-responsive" src="/blitz_tecnology/img/sistema/Blitz.gif" id="avatar">
+                <img class="img-responsive" src="/T.A/img/sistema/T.A.gif" id="avatar">
             </div>
         </div>
         <form class="login" action="acceso.php" method="POST">
@@ -67,7 +67,7 @@ if ($_SESSION) {
                 <input type="password" name="pass" class="form-control" placeholder="Ingrese contraseña" required="">
                 <span class="glyphicon glyphicon-qrcode form-control-feedback"></span>
             </div>
-            <button class="btn btn-lg btn-info btn-block" type="submit" style="background-color: #008CBA; padding: 5px 5px;">Iniciar Sesion</button>
+            <button class="btn btn-lg btn-info btn-block" type="submit" style="color: #181818; background-color: #FFDE59; padding: 5px 5px;">Iniciar Sesion</button>
             <div class="checkbox" style="padding: 0px 20px;">
                 <p style="text-align: center;" class="help-block"><a href="#">¿No puede Ingresar a su cuenta?</a></p>
             </div>

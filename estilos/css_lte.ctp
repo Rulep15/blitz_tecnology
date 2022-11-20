@@ -1,27 +1,27 @@
 <!--BOOTSTRAP-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/css/bootstrap.min.css">
+<link rel="stylesheet" href="/T.A/librerias/css/bootstrap.min.css">
 <!--ADMIN LTE 2-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/css/AdminLTE.min.css">
+<link rel="stylesheet" href="/T.A/librerias/css/AdminLTE.min.css">
 <!--TEMA ESTILO-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/css/skins/_all-skins.min.css">
+<link rel="stylesheet" href="/T.A/librerias/css/skins/_all-skins.min.css">
 <!--ZOOM IMAGEN-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/css/zoom.css" type="text/css">
+<link rel="stylesheet" href="/T.A/librerias/css/zoom.css" type="text/css">
 <!--MAPAS-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+<link rel="stylesheet" href="/T.A/librerias/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
 <!--SELECTOR DE BUSQUEDA-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/plugins/select2/select2.min.css">
+<link rel="stylesheet" href="/T.A/librerias/plugins/select2/select2.min.css">
 <!--CHECK-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/plugins/iCheck/square/blue.css">
+<link rel="stylesheet" href="/T.A/librerias/plugins/iCheck/square/blue.css">
 <!--EXTRAÑO ITEM-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<link rel="stylesheet" href="/T.A/librerias/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 <!--ICONOS FONTS FONT AWESOME-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/blitz_tecnology/librerias/bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="/T.A/librerias/fonts/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/T.A/librerias/bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
 <!--ICONO AL COSTADO DE LA BARRA DESPLEGABLE-->
-<link rel="stylesheet" href="/blitz_tecnology/librerias/bower_components/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="/T.A/librerias/bower_components/Ionicons/css/ionicons.min.css">
 <!--ICONO AL NAVEGACION Y TITULO-->
-<title>BlitzTecnology</title>
-<link rel="shortcut icon" href="/blitz_tecnology/img/sistema/off.png">
+<title>T.A</title>
+<link rel="shortcut icon" href="/T.A/img/sistema/off.png">
 
 
 <style>
@@ -35,39 +35,39 @@
     }
     /*PRIMER TITULO IZQUIERDA ARRIBA*/
     .skin-purple .main-header .logo {
-        background-color: #369ABF;
+        background-color: #FFD44D;
         border-bottom: 0 solid transparent;
     }
     /*COLOR RESALTADO TEXTO PRIMER TITULO*/
     .skin-purple .main-header .logo:hover {
-        background-color: #369ABF;
+        background-color: #FFD44D;
         color: #fff;
         border-bottom: 0 solid transparent;
     }
     /*COLOR 3 PUNTOS ARRIBA*/
     .skin-purple .main-header .navbar .sidebar-toggle {
-        background-color: #369ABF;
+        background-color: #FFD44D;
     }
     /*COLOR RESALTADO 3 PUNTOS ARRIBA*/
     .skin-purple .main-header .navbar .sidebar-toggle:hover { 
-        background-color: #369ABF;
+        background-color: #FFD44D;
     }
     /*BARRA DE ARRIBA CENTRO*/
     .skin-purple .main-header .navbar { 
-        background-color: #369ABF;
+        background-color: #FFD44D;
     }
     /*COLOR FOTO Y USUARIO*/
     .skin-purple .main-header .navbar .nav>li>a {
-        background-color: #369ABF;
+        background-color: #FFD44D;
     }
     /*COLOR DE ARRIBA DERECHA USUARIO SUCURSAL SALIR AYUDA*/
     .skin-purple .main-header li.user-header { 
-        background-color: #369ABF;           
+        background-color: #FFD44D;           
     }
     /*BARRA IZQUIERDA*/
     .skin-purple .sidebar-menu>li:hover>a, .skin-purple .sidebar-menu>li.active>a {
         /*COLOR DE RESALTADO*/
-        background: #369ABF;
+        background: #FFD44D;
         /*COLOR DEL BORDE IZQUIERDO*/
         border-left-color: blue;
     }
