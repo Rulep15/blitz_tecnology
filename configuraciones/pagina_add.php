@@ -80,8 +80,7 @@
                                                                     if (!empty($empmpleado)) {
                                                                         foreach ($empmpleado as $emp) {
                                                                     ?>
-                                                                        <option value="<?php echo $emp['mod_cod']; ?>"><?php echo $emp['per_nro_doc'] . ' - ' . $emp['mod_nombre'] . ' ' . $emp['per_apellido']; ?>
-                                                                        </option>
+                                                                            <option value="<?php echo $emp['mod_cod']; ?>"><?php echo $emp['per_nro_doc'] . ' - ' . $emp['mod_nombre'] . ' ' . $emp['per_apellido']; ?> </option>
                                                                         <?php
                                                                         }
                                                                     } else {
