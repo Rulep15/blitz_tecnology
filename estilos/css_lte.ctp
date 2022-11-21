@@ -269,9 +269,9 @@
 </style>
 
 <style>
-    html {
-        /*background:#ecf0f1;*/
-    }
+    /*html{
+        /*background:#ecf0f1;
+    }*/
     canvas {
         display:block;
         margin:auto;
