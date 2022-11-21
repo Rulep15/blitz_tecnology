@@ -1,0 +1,175 @@
+<?php session_start(); ?>
+<!DOCTYPE>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8">
+    <meta content="width=devicewidth, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <?php
+    include '../../conexion.php';
+    require '../../estilos/css_lte.ctp';
+    ?>
+    <style>
+        .header {
+            background-color: rgb(37, 150, 190);
+            color: white;
+        }
+
+        .btn-header {
+            background-color: white;
+            color: black;
+        }
+
+        /*Sombreado para los input*/
+        input:hover {
+            box-shadow: 0 1px 5px #333;
+        }
+
+        /*ZOOM A LA IMAGEN*/
+        #vimagen {
+            width: 50px;
+            height: auto;
+            transition: transform linear 0.3s;
+        }
+
+        #vimagen:hover {
+            transform: scale(2.0);
+        }
+    </style>
+</HEAD>
+
+<BODY class="hold-transition skin-purple sidebar-mini">
+    <div class="wrapper">
+        <?php require '../../estilos/cabecera.ctp'; ?>
+        <?php require '../../estilos/izquierda.ctp'; ?>
+        <div class="content-wrapper" style="background-color: #e9f5f9;">
+            <div class="content">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <?php if (!empty($_SESSION['mensaje'])) { ?>
+                            <?php
+                            $mensaje = explode("_/_", $_SESSION['mensaje']);
+                            if (($mensaje[0] == 'NOTICIA')) {
+                                $class = "success";
+                            } else {
+                                $class = "danger";
+                            }
+                            ?>
+                            <div class="alert alert-<?= $class; ?>" role="alert" id="mensaje">
+                                <i class="ion ion-information-circled"></i>
+                                <?php
+                                echo $mensaje[1];
+                                $_SESSION['mensaje'] = '';
+                                ?>
+                            </div>
+                        <?php } ?>
+                        <div class="box box-primary">
+                            <div class="header box-header">
+                                <i class="fa fa-user"></i>
+                                <h3 class="box-title">Usuarios</h3>
+                                <div class="box-tools">
+                                    <!--AGREGAR-->
+                                    <a href="usuario_add.php" class="btn-header btn-primary 
+                                           pull-right btn-sm">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <!--IMPRIMIR-->
+                                    <a href="usuario_print.php" style="margin-right: 5px;" target="_blank" class="btn-header btn-success
+                                           pull-right btn-sm">
+                                        <i class="fa fa-print"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-body no-padding">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-xs-12">
+                                        <!--BUSCADOR-->
+                                        <form action="usuario_index.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                            <div class="box-body">
+                                                <div class="form-group">
+                                                    <div class="col-lg-12 col-md-12 col-xs-12">
+                                                        <div class="input-group custom-search-form">
+                                                            <input type="search" class="form-control" name="buscar" placeholder="Buscar por nombre de persona..." autofocus="" />
+                                                            <span class="input-group-btn">
+                                                                <button type="submit" class="btn btn-primary btn-flat" data-title="Buscar" data-placement="bottom" rel="tooltip">
+                                                                    <span class="fa fa-search"></span>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <!--BUSCADOR-->
+                                        <?php
+                                        $valor = '';
+                                        if (isset($_REQUEST['buscar'])) {
+                                            $valor = $_REQUEST['buscar'];
+                                        }
+                                        $usuario = consultas::get_datos("SELECT * FROM v_ref_usuario WHERE usu_estado = 'ACTIVO' AND (TRIM(UPPER(emp_nombre))) LIKE TRIM(UPPER('%" . $valor . "%')) ORDER BY usu_cod");
+                                        if (!empty($usuario)) {
+                                        ?>
+                                            <div class="table-responsive">
+                                                <table class="table col-lg-12 col-md-12 col-xs-12">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">#</th>
+                                                            <th class="text-center">Usuario</th>
+                                                            <th class="text-center">Sucursal</th>
+                                                            <th class="text-center">Empleado</th>
+                                                            <th class="text-center">Grupo</th>
+                                                            <th class="text-center">Imagen</th>
+                                                            <th class="text-center">Acciones</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php foreach ($usuario as $u) { ?>
+                                                            <tr>
+                                                                <td class="text-center"> <?php echo $u['usu_cod']; ?></td>
+                                                                <td class="text-center"> <?php echo $u['usu_nick']; ?></td>
+                                                                <td class="text-center"> <?php echo $u['suc_descri']; ?></td>
+                                                                <td class="text-center"> <?php echo $u['emp_nombre']; ?></td>
+                                                                <td class="text-center"> <?php echo $u['gru_nombre']; ?></td>
+                                                                <td class="text-center">
+                                                                    <img height="50px" id="vimagen" src="/AMS/img/personas/<?php echo $u['usu_foto']; ?>" />
+                                                                </td>
+                                                                <td class="text-center">
+                                                                    <a href="/AMS/configuraciones/permisos/permisos_index.php?vgrucod=<?php echo $u['gru_cod'] . '&vgrunombre=' . $u['gru_nombre']; ?>" class="btn btn-md btn-info" rel="tooltip" title="Permisos">
+                                                                        <span class="fa fa-wrench"></span>
+                                                                    </a>
+
+                                                                    <a href="usuario_delete.php?vusucod=<?php echo $u['usu_cod']; ?>" class="btn btn-danger btn-md" role="button" data-title="Anular" rel="tooltip" data-placement="top" data-target="#borrar">
+                                                                        <span class="glyphicon glyphicon-ban-circle"></span>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        <?php } ?>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        <?php } else { ?>
+                                            <div class="alert alert-danger flat">
+                                                <span class="glyphicon glyphicon-info-sign"></span>
+                                                No se han encontrado registros...
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <?php require '../../estilos/pie.ctp'; ?>
+</BODY>
+<?php require '../../estilos/js_lte.ctp'; ?>
+<SCRIPT>
+    $("#mensaje").delay(1000).slideUp(200, function() {
+        $(this).alert('close');
+    });
+</SCRIPT>
+
+</HTML>
