@@ -41,7 +41,7 @@
                                 <i class="ion ion-plus"></i>
                                 <h3 class="box-title">Agregar Pagina</h3>
                                 <div class="box-tools">
-                                    <a href="proveedor_index.php" class="btn btn-primary pull-right btn-sm">
+                                    <a href="pagina_index.php" class="btn btn-primary pull-right btn-sm">
                                         <i class="fa fa-arrow-left"></i>
                                     </a>
                                 </div>
@@ -69,23 +69,22 @@
                                                 <div class="form-group">
                                                     <input type="hidden" name="voperacion" value="1">
                                                     <input type="hidden" name="vidcodigo" value="0">
-
                                                     <div class="form-group">
                                                         <label class="control-label col-lg-3 col-sm-2 col-xs-2">Modulo</label>
                                                         <div class="col-lg-4 col-sm-4 col-xs-4">
                                                             <div class="input-group">
-                                                                <?php $empmpleado = consultas::get_datos("SELECT * FROM ref_modulo order by mod_cod"); ?>
+                                                                <?php $empmpleado = consultas::get_datos("SELECT * FROM ref_modulos order by mod_cod"); ?>
                                                                 <select class="form-control select3" name="vidmodulo" required="" style="width: 320px;">
                                                                     <?php
                                                                     if (!empty($empmpleado)) {
                                                                         foreach ($empmpleado as $emp) {
                                                                     ?>
-                                                                            <option value="<?php echo $emp['mod_cod']; ?>"><?php echo $emp['per_nro_doc'] . ' - ' . $emp['mod_nombre'] . ' ' . $emp['per_apellido']; ?> </option>
+                                                                            <option value="<?php echo $emp['mod_cod']; ?>"><?php echo $emp['mod_nombre']  ?> </option>
                                                                         <?php
                                                                         }
                                                                     } else {
                                                                         ?>
-                                                                        <option value="">Debe seleccionar al menos una marca</option>
+                                                                        <option value="">Debe seleccionar al menos una Modulo</option>
                                                                     <?php }
                                                                     ?>
                                                                 </select>
@@ -94,26 +93,20 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="box-footer" style="text-align: center;">
-                                                <button class="fa fa-save btn btn-success pull-right" type="submit"> Guardar</button>
-                                            </div>
+                                        </form>
+                                        <div class="box-footer" style="text-align: center;">
+                                            <button class="fa fa-save btn btn-success pull-right" type="submit"> Guardar</button>
+                                        </div>
                                     </div>
-
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--MODAL DE CIUDAD-->
-
         </div>
-        <!--MODAL DE CIUDAD-->
-
-
-
     </div>
-    </div>
-    <?php require '../../estilos/pie.ctp'; ?>
+<?php require '../../estilos/pie.ctp'; ?>
 </BODY>
 <?php require '../../estilos/js_lte.ctp'; ?>
 <script>

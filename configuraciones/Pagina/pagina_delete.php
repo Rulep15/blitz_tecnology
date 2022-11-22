@@ -21,22 +21,22 @@
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <i class="ion ion-trash-b"></i>
-                                    <h3 class="box-title">Borrar Pais</h3>
+                                    <h3 class="box-title">Borrar Pagina</h3>
                                     <div class="box-tools">
-                                        <a href="pais_index.php" class="btn btn-primary pull-right btn-sm">
+                                        <a href="pagina_index.php" class="btn btn-primary pull-right btn-sm">
                                             <i class="fa fa-arrow-left"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <form action="pais_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
+                                <form action="pagina_control.php" method="POST" accept-charset="UTF-8" class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group">
-                                            <?php $resultado = consultas::get_datos("SELECT * FROM ref_pais WHERE id_pais=" . $_GET['vid_pais']); ?>
+                                            <?php $resultado = consultas::get_datos("SELECT * FROM ref_paginas WHERE pag_cod=" . $_GET['vidpag']); ?>
                                             <input type="hidden" name="voperacion" value="3">
-                                            <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['id_pais'];?>"/>
+                                            <input type="hidden" name="vcodigo" value="<?php echo $resultado[0]['pag_cod'];?>"/>
                                             <label class="col-lg-2 control-label">Nombre</label>
                                             <div class="col-lg-8">
-                                                <input class="form-control" type="text" name="vnombre" required="" value="<?php echo $resultado[0]['pai_descri']; ?>"
+                                                <input class="form-control" type="text" name="vnombre" required="" value="<?php echo $resultado[0]['pag_nombre']; ?>"
                                                        disabled="">
                                             </div>
                                         </div>
