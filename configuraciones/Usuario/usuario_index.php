@@ -87,7 +87,7 @@
                                                 <table class="table col-lg-12 col-md-12 col-xs-12">
                                                     <thead>
                                                         <tr>
-                                                            <th class="text-center">#</th>
+                                                            <th class="text-center">N°</th>
                                                             <th class="text-center">Usuario</th>
                                                             <th class="text-center">Sucursal</th>
                                                             <th class="text-center">Empleado</th>
@@ -105,7 +105,7 @@
                                                                 <td class="text-center"> <?php echo $u['persona']; ?></td>
                                                                 <td class="text-center"> <?php echo $u['gru_nombre']; ?></td>
                                                                 <td class="text-center">
-                                                                    <img height="50px" id="vimagen" src="/T.A/img/personas/<?php echo $u['usu_foto']; ?>" />
+                                                                    <img height="50px" id="vimagen" src="/T.A/img/sistema/<?php echo $u['usu_foto']; ?>" />
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <a href="/T.A/configuraciones/permisos/permisos_index.php?vgrucod=<?php echo $u['gru_cod'] . '&vgrunombre=' . $u['gru_nombre']; ?>" class="btn btn-md btn-info" rel="tooltip" title="Permisos">

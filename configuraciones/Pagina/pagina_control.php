@@ -4,15 +4,15 @@
     
     $operacion = $_REQUEST['voperacion'];
     $codigo = $_REQUEST['vpagina'];
-    $nombre = $_REQUEST['vnombre'];
     $direccion = $_REQUEST['vdireccion'];
+    $nombre = $_REQUEST['vnombre'];
     $modulo = $_REQUEST['vmodulo'];
     
     
     $sql = "SELECT sp_ref_pagina(". $operacion . ",". 
         (!empty($codigo) ? $codigo:0).",'".
-        (!empty($nombre) ? $nombre:"VACIO")."','".
-        (!empty($direccion) ? $direccion:"VACIO")."',".
+        (!empty($direccion) ? $direccion:"VACIO")."','".
+        (!empty($nombre) ? $nombre:"VACIO")."',".
         (!empty($modulo) ? $modulo:0).") AS paginas;";
 $resultado = consultas::get_datos($sql);
 

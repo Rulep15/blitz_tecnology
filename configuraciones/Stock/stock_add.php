@@ -6,16 +6,16 @@
     <meta charset="utf-8">
     <meta content="width=devicewidth, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <?php
-    include '../conexion.php';
-    require '../estilos/css_lte.ctp';
+    include '../../conexion.php';
+    require '../../estilos/css_lte.ctp';
     ?>
 
 </HEAD>
 
 <BODY class="hold-transition skin-purple sidebar-mini">
     <div id="wrapper" style="background-color: #1E282C">
-        <?php require '../estilos/cabecera.ctp'; ?>
-        <?php require '../estilos/izquierda.ctp'; ?>
+        <?php require '../../estilos/cabecera.ctp'; ?>
+        <?php require '../../estilos/izquierda.ctp'; ?>
         <div class="content-wrapper" style="background-color: #333333">
             <div class="content">
                 <div class="row">
@@ -122,9 +122,9 @@
 
         </div>
     </div>
-    <?php require '../estilos/pie.ctp'; ?>
+    <?php require '../../estilos/pie.ctp'; ?>
 </BODY>
-<?php require '../estilos/js_lte.ctp'; ?>
+<?php require '../../estilos/js_lte.ctp'; ?>
 <script>
     /*MENSAJE DE INSERT MARCAS, TIPO,. ETC*/
     $("#mensaje").delay(1000).slideUp(200, function() {

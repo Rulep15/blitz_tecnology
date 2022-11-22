@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                     <div class="box-footer" style="text-align: center;">
-                                        <button class="btn btn-success btn-lg" type="submit">Registrar</button>
+                                        <button class="fa fa-save btn btn-success pull-right" type="submit">Registrar</button>
                                     </div>
                                 </form>
                             </div>
