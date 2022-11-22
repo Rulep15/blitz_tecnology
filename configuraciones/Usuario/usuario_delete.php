@@ -8,26 +8,13 @@
         include '../../conexion.php';
         require '../../estilos/css_lte.ctp';
         ?>
-        <style>
-            .header {
-                background-color: rgb(37, 150, 190);
-                color: white;
-            }
-            .btn-header {
-                background-color: white;
-                color: black;
-            }
-            /*Sombreado para los input*/
-            input:hover{
-                box-shadow: 0 1px 5px #333;
-            }
-        </style> 
+  
     </HEAD>
     <BODY class="hold-transition skin-purple sidebar-mini">
-        <div class="wrapper">
+        <div class="wrapper" style="background-color: #1E282C;">
             <?php require '../../estilos/cabecera.ctp'; ?>
             <?php require '../../estilos/izquierda.ctp'; ?>
-            <div class="content-wrapper" style="background-color: #e9f5f9;">
+            <div class="content-wrapper" style="background-color: #272829;">
                 <div class="content">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12">
@@ -56,7 +43,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-lg-2 col-sm-2 col-xs-4">Empleado</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-6">
-                                                <input class="form-control" type="text" name="vempleado" required="" disabled="" value="<?php echo $resultado[0]['emp_nombre']; ?>">
+                                                <input class="form-control" type="text" name="vempleado" required="" disabled="" value="<?php echo $resultado[0]['persona']; ?>">
                                             </div>
                                         </div>
                                         <div class="form-group">

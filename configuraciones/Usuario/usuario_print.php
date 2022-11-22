@@ -16,10 +16,10 @@ class MYPDF extends TCPDF {
 
 $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, TRUE, 'UFT-8', FALSE);
 $pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('DejhaniraRojas');
+$pdf->SetAuthor('Lucas');
 $pdf->SetTitle('REPORTE DE USUARIOS');
 $pdf->SetSubject('TCPDF TUTORIAL');
-$pdf->SetAuthor('DejhaniraRojas');
+$pdf->SetAuthor('Lucas');
 $pdf->SetKeywords('TCPDF, PDF, example');
 $pdf->setPrintHeader(FALSE);
 $pdf->setHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE, PDF_HEADER_STRING);
@@ -71,7 +71,7 @@ $pdf->SetFillColor(255, 255, 255);
 $sqls = consultas::get_datos("SELECT * FROM v_ref_usuario ORDER BY usu_cod");
 foreach ($sqls AS $sql) {
     $pdf->Cell(15, 5, $sql['usu_cod'], 1, 0, 'C', 1);
-    $pdf->Cell(60, 5, $sql['emp_nombre'], 1, 0, 'C', 1);
+    $pdf->Cell(60, 5, $sql['persona'], 1, 0, 'C', 1);
     $pdf->Cell(30, 5, $sql['usu_nick'], 1, 0, 'C', 1);
     $pdf->Cell(30, 5, $sql['usu_estado'], 1, 0, 'C', 1);
     $pdf->Cell(30, 5, $sql['suc_descri'], 1, 0, 'C', 1);

@@ -8,43 +8,12 @@
         include '../../conexion.php';
         require '../../estilos/css_lte.ctp';
         ?>
-        <style>
-            .header {
-                background-color: rgb(37, 150, 190);
-                color: white;
-            }
-            .btn-header {
-                background-color: white;
-                color: black;
-            }
-            /*Sombreado para los input*/
-            input:hover{
-                box-shadow: 0 1px 5px #333;
-            }
-
-            /*Mostrar y ocultar contraseña*/
-            .p {
-                pointer-events: initial;
-                cursor: pointer;
-            }
-
-            #show{
-                display: none;
-            }
-
-            /*ESTILO DE LOS BTN AGREGAR*/
-            .btn-add{
-                margin-left: 5px;
-                border-radius: 6px;
-            }
-            /*ESTILO DE LOS BTN AGREGAR*/
-        </style>
     </HEAD>
     <BODY class="hold-transition skin-purple sidebar-mini">
-        <div class="wrapper">
+        <div class="wrapper" style="background-color: #1E282C;">
             <?php require '../../estilos/cabecera.ctp'; ?>
             <?php require '../../estilos/izquierda.ctp'; ?>
-            <div class="content-wrapper" style="background-color: #e9f5f9">
+            <div class="content-wrapper" style="background-color: #272829;">
                 <div class="content">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12">
