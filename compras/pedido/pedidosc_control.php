@@ -7,7 +7,7 @@ $operacion = $_REQUEST['voperacion'];
 $codigo = $_REQUEST['vidpedido'];
 $fecha = $_REQUEST['vfecha'];
 $usuario = $_REQUEST['vusuario'];
-$observacion = $_REQUEST['vobservacion'];
+$descri = $_REQUEST['vdescri'];
 $estado = $_REQUEST['vestado'];
 
 
@@ -15,7 +15,7 @@ $sql = "SELECT sp_compras_pedidos(" . $operacion . "," .
     (!empty($codigo) ? $codigo : 0) . "," .
     (!empty($usuario) ? $usuario : 0) . ",'" .
     (!empty($fecha) ? $fecha : "01-01-0001") . "','" .
-    (!empty($observacion) ? $observacion : "VACIO") . "','" .
+    (!empty($descri) ? $descri : "VACIO") . "','" .
     (!empty($estado) ? $estado : "VACIO") . "') AS pedidosc;";
 $resultado = consultas::get_datos($sql);
 
