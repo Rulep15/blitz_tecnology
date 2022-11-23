@@ -63,7 +63,7 @@
                                         <label class="control-label col-lg-2 col-sm-2 col-xs-3">Clave</label>
                                         <div class="col-lg-8 col-sm-8 col-xs-9">
                                             <input type="password" name="vclave" class="form-control" id="vclave" placeholder="Ingrese su contraseña" required="" style="width: 100%;" onkeypress="return alphanum(event);" onpaste="return alphanum(event);" maxlength="20">
-                                           <!--- <i class="p glyphicon glyphicon-eye-close form-control-feedback" id="hide" onclick="passFunction()"></i>-->
+                                            <!--- <i class="p glyphicon glyphicon-eye-close form-control-feedback" id="hide" onclick="passFunction()"></i>-->
                                             <!---<i class="p glyphicon glyphicon-eye-open form-control-feedback" id="show" onclick="passFunction()"></i>--->
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@
                                                     <?php }
                                                     ?>
                                                 </select>
-                                                 <span class="input-group-btn">
+                                                <span class="input-group-btn">
                                                     <button class="btn btn-primary btn-flat" type="button" data-toggle="modal" data-target="#registrar_sucursal">
                                                         <i class="fa fa-plus"></i>
                                                     </button>
@@ -164,7 +164,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer" style="text-align: center;">
-                                    <button class="fa fa-save btn btn-success pull-right" type="submit">Registrar</button>
+                                    <button class="fa fa-save btn btn-success pull-right" type="submit"> Registrar</button>
                                 </div>
                             </form>
                         </div>
@@ -235,7 +235,8 @@
                                     </div>
                                 </div>
                                 <div class="box-footer" style="text-align: center;">
-                                    <button class="btn btn-success btn-lg" type="submit">Registrar</button>
+                                    <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger pull-left" id="cerrar_ciudad">Cerrar</button>
+                                    <button class="fa fa-save btn btn-success pull-right" type="submit"> Registrar</button>
                                 </div>
                             </div>
                         </form>
@@ -344,8 +345,8 @@
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_ciudad">Cerrar</button>
-                                <button type="submit" class="btn btn-success pull-right">Registrar</button>
+                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_ciudad"> Cerrar</button>
+                                <button type="submit" class="fa fa-save btn btn-success pull-right"> Registrar</button>
                             </div>
                         </form>
                     </div>
@@ -373,8 +374,8 @@
                                 </div>
                             </div>
                             <div class="box-footer">
-                                <button type="reset" data-dismiss="modal" class="btn btn-danger" id="cerrar_ciudad">Cerrar</button>
-                                <button type="submit" class="btn btn-success pull-right">Registrar</button>
+                                <button type="reset" data-dismiss="modal" class="fa fa-remove btn btn-danger" id="cerrar_ciudad"> Cerrar</button>
+                                <button type="submit" class="fa fa-save btn btn-success pull-right"> Registrar</button>
                             </div>
                         </form>
                     </div>
@@ -472,18 +473,18 @@
         $('#vdescriciu').val("");
     });
 
-  /*  function passFunction() {
-        var x = document.getElementById("vclave");
-        if (x.type === "password") {
-            x.type = "text";
-            document.getElementById('show').style.display = "inline-block";
-            document.getElementById('hide').style.display = "none";
-        } else {
-            x.type = "password";
-            document.getElementById('show').style.display = "none";
-            document.getElementById('hide').style.display = "inline-block";
-        }
-    }*/
+    /*  function passFunction() {
+          var x = document.getElementById("vclave");
+          if (x.type === "password") {
+              x.type = "text";
+              document.getElementById('show').style.display = "inline-block";
+              document.getElementById('hide').style.display = "none";
+          } else {
+              x.type = "password";
+              document.getElementById('show').style.display = "none";
+              document.getElementById('hide').style.display = "inline-block";
+          }
+      }*/
 </script>
 
 </HTML>
