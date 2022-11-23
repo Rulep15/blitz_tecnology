@@ -108,7 +108,7 @@
                                                     if (!empty($empleado)) {
                                                         foreach ($empleado as $e) {
                                                     ?>
-                                                            <option value="<?php echo $e['id_empleado']; ?>"><?php echo $e['empleado'] . ' - ' . $e['car_descri']; ?></option>
+                                                            <option value="<?php echo $e['id_empleado']; ?>"><?php echo $e['per_nombre'] . ' - ' . $e['car_descri']; ?></option>
                                                         <?php
                                                         }
                                                     } else {

@@ -118,7 +118,7 @@
                                                                     <td class="text-center"> <?php echo $p['razon_social']; ?></td>
                                                                     <td class="text-center"> <?php echo $p['ciu_descri']; ?></td>
                                                                     <td class="text-center"> <?php echo $p['tp_descri']; ?></td>
-                                                                    <TD class="tex-center"><img height="45px" src="/blitz_tecnology/img/personas/<?php echo $p['per_imagen']; ?>"/></TD>                                                                    <td class="text-center">
+                                                                    <TD class="tex-center"><img height="45px" src="/T.A/img/personas/<?php echo $p['per_imagen']; ?>"/></TD>                                                                    <td class="text-center">
                                                                     
                                                                         <a href="persona_edit.php?vidpersona=<?php echo $p['id_persona']; ?>" 
                                                                            class="btn btn-warning btn-sm" role="button"
