@@ -12,7 +12,7 @@
 </HEAD>
 
 <BODY class="hold-transition skin-purple sidebar-mini">
-    <div id="wrapper" style="background-color:  #FFD44D;">
+    <div id="wrapper" style="background-color:  #1E282C;">
         <?php require '../../estilos/cabecera.ctp'; ?>
         <?php require '../../estilos/izquierda.ctp'; ?>
         <div class="content-wrapper" style="background-color: #333333;">
@@ -83,7 +83,7 @@
                                                             <th class="text-center">N°</th>
                                                             <th class="text-center">Fecha</th>
                                                             <th class="text-center">Usuario</th>
-                                                            <th class="text-center">Descripcion</th>
+                                                            <th class="text-center">Observacion</th>
                                                             <th class="text-center">Estado</th>
                                                             <th class="text-center">Acciones</th>
                                                         </tr>

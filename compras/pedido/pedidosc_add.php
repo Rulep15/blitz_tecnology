@@ -72,7 +72,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-lg-2 col-sm-2 col-xs-4">Descripcion</label>
+                                            <label class="control-label col-lg-2 col-sm-2 col-xs-4">Observacion</label>
                                             <div class="col-lg-6 col-sm-6 col-xs-7">
                                                 <input class="form-control" type="text" name="vdescri" required="">
                                             </div>

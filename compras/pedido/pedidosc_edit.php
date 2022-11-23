@@ -36,12 +36,12 @@
                                         <input class="form-control" type="hidden" name="voperacion" value="2">
                                         <input class="form-control" name="vidpedido" type="hidden" value="<?php echo $resultado[0]['id_pedido']; ?>">
                                         <input class="form-control" name="vusuario" type="hidden" value="<?php echo $resultado[0]['usu_cod']; ?>">
-                                        <input class="form-control" name="vfecha" type="hidden" value="<?php echo $resultado[0]['fechap']; ?>">
+                                        <input class="form-control" name="vfecha" type="hidden" value="<?php echo $resultado[0]['fechac']; ?>">
                                         <input class="form-control" name="vestado" type="hidden" value="<?php echo $resultado[0]['estado']; ?>">
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">Observacion</label>
                                             <div class="col-lg-8">
-                                                <input class="form-control" type="text" name="vobservacion" required="" value="<?php echo $resultado[0]['observacion']; ?>">
+                                                <input class="form-control" type="text" name="vdescri" required="" value="<?php echo $resultado[0]['descri']; ?>">
                                             </div>
                                         </div>
                                     </div>
