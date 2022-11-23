@@ -62,10 +62,10 @@
                                                 <table class="table col-lg-12 col-md-12 col-xs-12">
                                                     <thead>
                                                         <tr>
-                                                            <th class="text-center">#</th>
+                                                            <th class="text-center">N°</th>
                                                             <th class="text-center">Fecha</th>
                                                             <th class="text-center">Usuario</th>
-                                                            <th class="text-center">Observacion</th>
+                                                            <th class="text-center">Descripcion</th>
                                                             <th class="text-center">Estado</th>
                                                         </tr>
                                                     </thead>
@@ -75,7 +75,7 @@
                                                                 <td class="text-center"> <?php echo $pc['id_pedido']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['fecha_pedido1']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['usu_nick']; ?></td>
-                                                                <td class="text-center"> <?php echo $pc['observacion']; ?></td>
+                                                                <td class="text-center"> <?php echo $pc['descri']; ?></td>
                                                                 <td class="text-center"> <?php echo $pc['estado']; ?></td>
                                                             </tr>
                                                         <?php } ?>

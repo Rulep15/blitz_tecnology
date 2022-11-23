@@ -12,7 +12,7 @@
 </HEAD>
 
 <BODY class="hold-transition skin-purple sidebar-mini">
-    <div id="wrapper" style="background-color:  #1E282C;">
+    <div id="wrapper" style="background-color:  #FFD44D;">
         <?php require '../../estilos/cabecera.ctp'; ?>
         <?php require '../../estilos/izquierda.ctp'; ?>
         <div class="content-wrapper" style="background-color: #333333;">

@@ -109,7 +109,7 @@
                                                                 </td>
                                                                 <td class="text-center">
                                                                     <a href="/T.A/configuraciones/permisos/permisos_index.php?vgrup=<?php echo $u['gru_cod'] . '&vgrunombre=' . $u['gru_nombre']; ?>" class="btn btn-md btn-info" rel="tooltip" title="Permisos">
-                                                                        <span class="fa fa-wrench"></span>
+                                                                        <span class="fa fa-cog"></span>
                                                                     </a>
 
                                                                     <a href="usuario_delete.php?vusucod=<?php echo $u['usu_cod']; ?>" class="btn btn-danger btn-md" role="button" data-title="Anular" rel="tooltip" data-placement="top" data-target="#borrar">
