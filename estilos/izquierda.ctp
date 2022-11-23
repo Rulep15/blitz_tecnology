@@ -2,13 +2,13 @@
     <section class="sidebar" >
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?php
+                <img src="/T.A/img/sistema/User_Line.png"<?php
                 if (!empty($_SESSION['usu_foto'])) {
                     echo $_SESSION['usu_foto'];
                 } else {
                     echo "/T.A/img/sistema/nodisponible.jpg";
                 }
-                ?>" class="img-circle" alt="Imagen de Usuario">
+                ?> class="img-circle" alt="Imagen de Usuario">
             </div>
           <div class="pull-left info" style="font-size: 12px; padding-top: 5px;"><p><?php echo $_SESSION['nombres']; ?></p>
                 <a  href="#">

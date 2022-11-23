@@ -12,13 +12,13 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="<?php
+                        <img src="/T.A/img/sistema/User_Line.png"<?php
                         if (!empty($_SESSION['usu_foto'])) {
                             echo $_SESSION['usu_foto'];
                         } else {
                             echo "/T.A/img/sistema/nodisponible.jpg";
                         }
-                        ?>" class="user-image" alt="User Image">
+                        ?> class="user-image" alt="User Image">
                         <span class="hidden-xs"><?php echo $_SESSION['usu_nick']; ?></span>
                     </a>
                     <ul class="dropdown-menu">

@@ -99,7 +99,7 @@
             $(this).find('input:text:visible:first').focus();
         });
 
-        function registrar_permisos(datos) {
+         function registrar_permisos(datos) {
             var dat = datos.split("_");
             $.ajax({
                 type: "GET",

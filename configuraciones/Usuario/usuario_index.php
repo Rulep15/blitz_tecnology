@@ -108,7 +108,7 @@
                                                                     <img height="50px" id="vimagen" src="/T.A/img/sistema/<?php echo $u['usu_foto']; ?>" />
                                                                 </td>
                                                                 <td class="text-center">
-                                                                    <a href="/T.A/configuraciones/permisos/permisos_index.php?vgrucod=<?php echo $u['gru_cod'] . '&vgrunombre=' . $u['gru_nombre']; ?>" class="btn btn-md btn-info" rel="tooltip" title="Permisos">
+                                                                    <a href="/T.A/configuraciones/permisos/permisos_index.php?vgrup=<?php echo $u['gru_cod'] . '&vgrunombre=' . $u['gru_nombre']; ?>" class="btn btn-md btn-info" rel="tooltip" title="Permisos">
                                                                         <span class="fa fa-wrench"></span>
                                                                     </a>
 

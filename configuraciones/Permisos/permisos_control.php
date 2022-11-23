@@ -17,7 +17,7 @@ if (isset($_REQUEST['vgrup'])) {
     <form action = "permisos_control.php" method = "post" accept-charset = "utf-8" class = "form-horizontal">
         <div class = "panel-body se">
             <input type = "hidden" name = "accion" value="1">
-            <input type = "hidden" name = "vgru" value="<?php echo $gru ?>"/>
+            <input type = "hidden" name = "vgrup" value="<?php echo $gru ?>"/>
             <input type = "hidden" name = "vgrunombre" value="<?php echo $grunom ?>">
             <input type = "hidden" name = "pagina" value="permisos_index.php">
             <div class="row">
